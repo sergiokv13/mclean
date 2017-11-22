@@ -56,6 +56,8 @@ class UserController extends Controller
 
         $user->save();
 
+        $user->assignRole("Administrator");
+
         return redirect('scaffold-users');
     }
 

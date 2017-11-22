@@ -11,19 +11,19 @@
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/project"><i class="fa fa-code"></i> Projects</a></li>
-        <li class="active">create</li>
+        <li><a href="/project"><i class="fa fa-cog"></i> proyectos</a></li>
+        <li class="active">nuevo</li>
     </ol>
     <form method = 'POST' action = '{!!url("project")!!}' enctype="multipart/form-data" id="form-creation">
         <input type = 'hidden' name = '_token' value = '{{ Session::token() }}'>
         <div class="input-field col s6 form-group">
-            <label for="name">Name</label>
+            <label for="name">Nombre</label>
             <input id="name" name = "name" type="text" class="validate form-control">
         </div>
 
 
         <div class="input-field col s6 form-group">
-            <label for="name">Category</label>
+            <label for="name">Categoría</label>
             <select name="category" id="category" class="form-control">
                 @foreach($categories as $category) 
                     <option value="{{ $category->id}}">{{ $category->name}}</option>
@@ -32,17 +32,10 @@
         </div>
 
         <div class="input-field col s6 form-group">
-            <label for="description">Description</label>
+            <label for="description">Descripción</label>
             <textarea id="description" name = "description" class="validate form-control"></textarea>
         </div>
-        <div class="input-field col s6 form-group">
-            <label for="link_to_experiment_demo">Link to experiment demo</label>
-            <input id="link_to_experiment_demo" name = "link_to_experiment_demo" type="text" class="validate form-control">
-        </div>
-        <div class="input-field col s6 form-group">
-            <label for="link_to_user_demo">Link to user demo</label>
-            <input id="link_to_user_demo" name = "link_to_user_demo" type="text" class="validate form-control">
-        </div>
+        
         <div class="input-field col s6">
                 <img id="project_preview" src="#" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="project_image" name = "project_image" type="file" class="validate"><br>

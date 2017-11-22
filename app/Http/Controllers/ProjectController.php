@@ -73,12 +73,6 @@ class ProjectController extends Controller
         $project->category_id = $request->category;
 
         
-        $project->link_to_experiment_demo = $request->link_to_experiment_demo;
-
-        
-        $project->link_to_user_demo = $request->link_to_user_demo;
-
-        
         $image_name = time().'.'.$request->project_image->getClientOriginalExtension();
         
         $request->project_image->move(public_path('projects'), $image_name);
@@ -206,10 +200,6 @@ class ProjectController extends Controller
         $project->description = $request->description;
 
         $project->description = $request->description;
-        
-        $project->link_to_experiment_demo = $request->link_to_experiment_demo;
-        
-        $project->link_to_user_demo = $request->link_to_user_demo;
 
         $project->category_id = $request->category;
 

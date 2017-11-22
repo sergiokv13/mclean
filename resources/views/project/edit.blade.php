@@ -43,16 +43,7 @@
                 {{ $project->description }}
             </textarea>
         </div>
-        <div class="input-field col s6 form-group">
-            <label for="link_to_experiment_demo">Link to experiment demo</label>
-            <input id="link_to_experiment_demo" name = "link_to_experiment_demo" type="text" class="validate form-control" value="{!!$project->
-            link_to_experiment_demo!!}"> 
-        </div>
-        <div class="input-field col s6 form-group">
-            <label for="link_to_user_demo">Link to user demo</label>
-            <input id="link_to_user_demo" name = "link_to_user_demo" type="text" class="validate form-control" value="{!!$project->
-            link_to_user_demo!!}"> 
-        </div>
+        
         <div class="input-field col s6">
                 <img id="project_preview" src="{{ url('projects/'.$project->project_image)}}" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="project_image" name = "project_image" type="file" class="validate"><br>

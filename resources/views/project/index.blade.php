@@ -5,24 +5,23 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>All Projects</h3>
+    <h3>Todos los proyectos</h3>
 </div>
     <div class="box-body">
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><i class="fa fa-code"></i> projects</li>
+        <li class="active"><i class="fa fa-cog"></i> proyectos</li>
     </ol>
     @if (Auth::user()->Roles()->where('name','Administrator')->get()->count() > 0)
-    <a href='{!!url("project")!!}/create' class = "btn btn-primary"><i class="fa fa-plus fa-md" aria-hidden="true"></i> New</a>    
+    <a href='{!!url("project")!!}/create' class = "btn btn-primary"><i class="fa fa-plus fa-md" aria-hidden="true"></i> Nuevo</a>    
     @endif
     <div class="table-responsive">
     <table class="table table-hover">
         <thead>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Documents</th>
-            <th>Actions</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Documentos</th>
         </thead>
         <tbody>
             @foreach($projects as $project) 

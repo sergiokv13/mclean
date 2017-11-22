@@ -6,7 +6,7 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>All Users</h3>
+    <h3>Miembros del equipo</h3>
 </div>
     <div class="box-body">
 
@@ -19,8 +19,8 @@
     <div class="table-responsive">
     <table class="table table-responsive">
         <thead class = "table table-hover">
-            <th>name</th>
-            <th>member image</th>
+            <th>Nombre</th>
+            <th>Imagen</th>
         </thead>
         <tbody>
             @foreach($team_members as $team_member) 

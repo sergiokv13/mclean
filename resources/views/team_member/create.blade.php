@@ -15,46 +15,49 @@
     <form method = 'POST' action = '{!!url("team_member")!!}' enctype="multipart/form-data" runat="server">
         <input type = 'hidden' name = '_token' value = '{{ Session::token() }}'>
         <div class="form-group">
-            <label for="name">name</label>
+            <label for="name">Nombre</label>
             <input id="name" name = "name" type="text" class="form-control">
         </div>
+        
         <div class="form-group">
-            <label for="welcome_title">welcome</label>
-            <input id="welcome_title" name = "welcome_title" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-             <label for="position">position</label>
+             <label for="position">Cargo</label>
             <input id="position" name = "position" type="text" class="form-control">
         </div>
 
         <div class="form-group">
-             <label for="about_team_member">about_team_member</label>
+            <label for="welcome_title">Texto de bienvenida</label>
+            <input id="welcome_title" name = "welcome_title" type="text" class="form-control">
+        </div>
+
+
+        <div class="form-group">
+             <label for="about_team_member">Texto de presentación</label>
             <input id="about_team_member" name = "about_team_member" type="text" class="form-control">
         </div>
         <div class="form-group">
-            <label for="facebook_link">facebook_link</label>
+            <label for="facebook_link">URL Facebook</label>
             <input id="facebook_link" name = "facebook_link" type="text" class="form-control">
         </div>
         <div class="form-group">
-             <label for="googleplus_link">googleplus_link</label>
+             <label for="googleplus_link">URL Google Plus</label>
             <input id="googleplus_link" name = "googleplus_link" type="text" class="form-control">
         </div>
         <div class="form-group">
-            <label for="twitter_link">twitter_link</label>
+            <label for="twitter_link">URL Twitter</label>
             <input id="twitter_link" name = "twitter_link" type="text" class="form-control">
         </div>
         <div class="form-group">
-            <label for="linkedin_link">linkedin_link</label>
+            <label for="linkedin_link">URL Linkedin</label>
             <input id="linkedin_link" name = "linkedin_link" type="text" class="form-control">
         </div>
 
         <div class="form-group">
-                <img id="member_preview" src="#" alt="The image preview will be displayed here." height="100px;"/>
+                <label>Imagen</label>
+                <img id="member_preview" src="#" alt="La imagen se mostrara acá." height="100px;"/>
                 <input id="member_image" name = "member_image" type="file" class="form-control"><br>
         </div><br>
 
-        <button class = "btn btn-primary" type ='submit'>Create</button>
+        <button class = "btn btn-primary" type ='submit'>Crear</button>
     </form>
 </div>
 </div>

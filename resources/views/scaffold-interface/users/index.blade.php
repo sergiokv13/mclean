@@ -3,24 +3,23 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-	<h3>All Users</h3>
+	<h3>Todos los usuarios</h3>
 </div>
 	<div class="box-body">
 
 	<ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><i class="fa fa-group"></i> users</li>
+        <li class="active"><i class="fa fa-cog"></i> Usuarios</li>
     </ol>
 
-		<a href="{{url('/scaffold-users/create')}}" class = "btn btn-primary"><i class="fa fa-plus fa-md" aria-hidden="true"></i> New</a>
+		<a href="{{url('/scaffold-users/create')}}" class = "btn btn-primary"><i class="fa fa-plus fa-md" aria-hidden="true"></i> Nuevo</a>
 
 	<div class="table table-responsive">
 		<table class = "table table-hover">
 		<thead>
-			<th>Name</th>
-			<th>Email</th>
+			<th>Nombre</th>
+			<th>Correo electrónico</th>
 			<th>Roles</th>
-			<th>Actions</th>
 		</thead>
 		<tbody>
 			@foreach($users as $user)

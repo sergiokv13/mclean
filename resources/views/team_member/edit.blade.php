@@ -11,53 +11,53 @@
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/project"><i class="fa fa-code"></i> equipo</a></li>
-        <li class="active">edit</li>
+        <li><a href="/team_member"><i class="fa fa-users"></i> equipo</a></li>
+        <li class="active">editar</li>
     </ol>
 
     <form method = 'POST' action = '{!! url("team_member")!!}/{!!$team_member->
         id!!}/update' enctype="multipart/form-data"> 
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
         <div class="form-group ">
-            <label for="name">name</label>
+            <label for="name">Nombre</label>
             <input id="name" name = "name" type="text" class="form-control" value="{!!$team_member->
             name!!}"> 
         </div>
 
         <div class="form-group ">
-            <label for="welcome_title">welcome_title</label>
-            <input id="welcome_title" name = "welcome_title" type="text" class="form-control" value="{!!$team_member->
-            welcome_title!!}"> 
-        </div>
-
-        <div class="form-group ">
-            <label for="position">position</label>
+            <label for="position">Cargo</label>
             <input id="position" name = "position" type="text" class="form-control" value="{!!$team_member->
             position!!}"> 
         </div>
+
+        <div class="form-group ">
+            <label for="welcome_title">Texto de bienvenida</label>
+            <input id="welcome_title" name = "welcome_title" type="text" class="form-control" value="{!!$team_member->
+            welcome_title!!}"> 
+        </div>
         
         <div class="form-group ">
-            <label for="about_team_member">about_team_member</label>
+            <label for="about_team_member">Texto de presentación</label>
             <input id="about_team_member" name = "about_team_member" type="text" class="form-control" value="{!!$team_member->
             about_team_member!!}"> 
         </div>
         <div class="form-group ">
-            <label for="facebook_link">facebook_link</label>
+            <label for="facebook_link">URL Facebook</label>
             <input id="facebook_link" name = "facebook_link" type="text" class="form-control" value="{!!$team_member->
             facebook_link!!}"> 
         </div>
         <div class="form-group ">
-            <label for="googleplus_link">googleplus_link</label>
+            <label for="googleplus_link">URL Google Plus</label>
             <input id="googleplus_link" name = "googleplus_link" type="text" class="form-control" value="{!!$team_member->
             googleplus_link!!}"> 
         </div>
         <div class="form-group ">
-            <label for="twitter_link">twitter_link</label>
+            <label for="twitter_link">URL Twitter</label>
             <input id="twitter_link" name = "twitter_link" type="text" class="form-control" value="{!!$team_member->
             twitter_link!!}"> 
         </div>
         <div class="form-group ">
-            <label for="linkedin_link">linkedin_link</label>
+            <label for="linkedin_link">URL Linkedin</label>
             <input id="linkedin_link" name = "linkedin_link" type="text" class="form-control" value="{!!$team_member->
             linkedin_link!!}"> 
         </div>
@@ -67,7 +67,7 @@
                 <input id="member_image" name = "member_image" type="file" class="form-control"><br>
         </div><br>
 
-        <button class = "btn btn-primary" type ='submit'>Update</button>
+        <button class = "btn btn-primary" type ='submit'>Guardar</button>
     </form>
 </div>
 </div>

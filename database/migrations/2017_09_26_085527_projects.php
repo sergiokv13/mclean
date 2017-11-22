@@ -26,10 +26,6 @@ class Projects extends Migration
         
         $table->longText('description');
         
-        $table->String('link_to_experiment_demo');
-        
-        $table->String('link_to_user_demo');
-        
         $table->String('project_image');
 
         $table->integer('category_id');

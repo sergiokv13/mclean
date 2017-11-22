@@ -5,7 +5,7 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>Edit website information</h3>
+    <h3>Modificar la información del sitio.</h3>
 </div>
     <div class="box-body">
 
@@ -18,85 +18,102 @@
         id!!}/update' enctype="multipart/form-data" runat="server"> 
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
 
+        <h2>Sección de portada </h2>
+        <info>Esta sección es la primera que se ve al ingresar al sitio web.</info><br><br>
         <div class="input-field col s6 form-group">
-            <label for="welcome_text">Welcome Text</label>
+            <label for="welcome_text">Texto de bienvenida</label>
             <textarea id="welcome_text" name = "welcome_text"  class="validate form-control">{!!$website_information->
             welcome_text!!}</textarea>
-            
         </div>
+
+        <h2>Sección de presentación del arquitecto </h2>
+        <info>Esta sección es la primera del sitio, en la cual se presenta al arquitecto.</info><br><br>
         <div class="input-field col s6 form-group">
-            <label for="about_me">About me</label>
+            <label for="about_me">Texto de sección sobre el arquitecto</label>
             <textarea id="about_me" name = "about_me" type="text" class="validate form-control">{!!$website_information->
             about_me!!}</textarea>
-            
         </div>
+        <div class="form-group">
+            <label for="address">Foto del arquitecto</label><br>
+                <img id="mclean_preview" src="{{ url('website/'.$website_information->mclean_image)}}" alt="The image preview will be displayed here." height="100px;"/>
+                <input id="mclean_image" name = "mclean_image" type="file" ><br>
+        </div>
+
+         <div class="form-group">
+            <label for="address">Image de fondo para la sección</label><br>
+                <img id="about_preview" src="{{ url('website/'.$website_information->about_image)}}" alt="The image preview will be displayed here." height="100px;"/>
+                <input id="about_image" name = "about_image" type="file" ><br>
+        </div>
+
+        <h2>Sección mapa del sitio </h2>
+        <info>En esta sección se presenta el menú de navegación.</info><br><br>
+
+         <div class="form-group">
+            <label for="address">Imagen de fondo para menú</label><br>
+                <img id="menu_preview" src="{{ url('website/'.$website_information->menu_image)}}" alt="The image preview will be displayed here." height="100px;"/>
+                <input id="menu_image" name = "menu_image" type="file" ><br>
+        </div>
+
+        <h2>Sección de proyectos </h2>
+        <info>En esta sección se presentan los proyectos.</info><br><br>
+
         <div class="input-field col s6 form-group">
-            <label for="projects_text">Projects text</label>
+            <label for="projects_text">Texto de sección de proyectos</label>
             <textarea id="projects_text" name = "projects_text" type="text" class="validate form-control">{!!$website_information->
             projects_text!!} </textarea>
-            
         </div>
+
+        <div class="form-group">
+            <label for="address">Imagen de fondo para proyectos</label><br>
+                <img id="projects_preview" src="{{ url('website/'.$website_information->projects_image)}}" alt="The image preview will be displayed here." height="100px;"/>
+                <input id="projects_image" name = "projects_image" type="file" ><br>
+        </div>
+
+        <h2>Sección de equipo </h2>
+        <info>En esta sección se presentan los integrantes del equipo.</info><br><br>
+
         <div class="input-field col s6 form-group">
-            <label for="team_text">Team text</label>
+            <label for="team_text">Texto de sección equipo</label>
             <textarea id="team_text" name = "team_text" type="text" class="validate form-control" >{!!$website_information->
             team_text!!} </textarea>
-            
         </div>
+
+        <div class="form-group">
+            <label for="address">Imagen de fondo para equipo</label><br>
+                <img id="team_preview" src="{{ url('website/'.$website_information->team_image)}}" alt="The image preview will be displayed here." height="100px;"/>
+                <input id="team_image" name = "team_image" type="file" ><br>
+        </div>
+
+        <h2>Sección de contacto </h2>
+        <info>En esta sección se presenta el formulario de contacto, junto con la información pertinente.</info><br><br>
+
         <div class="input-field col s6 form-group">
-            <label for="contact_email">Contact email</label>
+            <label for="contact_email">Correo electrónico de contacto</label>
             <input id="contact_email" name = "contact_email" type="text" class="validate form-control" value="{!!$website_information->
             contact_email!!}"> 
             
         </div>
         <div class="input-field col s6 form-group">
-            <label for="contact_phone">Contact phone</label>
+            <label for="contact_phone">Telefono fijo de contacto</label>
             <input id="contact_phone" name = "contact_phone" type="text" class="validate form-control" value="{!!$website_information->
             contact_phone!!}"> 
             
         </div>
         <div class="input-field col s6 form-group">
-            <label for="contact_phone2">Contact phone 2</label>
+            <label for="contact_phone2">Telefono celular de contacto</label>
             <input id="contact_phone2" name = "contact_phone2" type="text" class="validate form-control" value="{!!$website_information->
             contact_phone2!!}"> 
             
         </div>
         <div class="input-field col s6 form-group">
-            <label for="address">Address</label>
+            <label for="address">Dirección</label>
             <input id="address" name = "address" type="text" class="validate form-control" value="{!!$website_information->
             address!!}"> 
             
-        </div>
-         <div class="form-group">
-            <label for="address">About Image</label><br>
-                <img id="about_preview" src="{{ url('website/'.$website_information->about_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="about_image" name = "about_image" type="file" class="form-control"><br>
-        </div>
-
-         <div class="form-group">
-            <label for="address">Menu Image</label><br>
-                <img id="menu_preview" src="{{ url('website/'.$website_information->menu_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="menu_image" name = "menu_image" type="file" class="form-control"><br>
-        </div>
-         <div class="form-group">
-            <label for="address">Projects Image</label><br>
-                <img id="projects_preview" src="{{ url('website/'.$website_information->projects_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="projects_image" name = "projects_image" type="file" class="form-control"><br>
-        </div>
-
-         <div class="form-group">
-            <label for="address">Team Image</label><br>
-                <img id="team_preview" src="{{ url('website/'.$website_information->team_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="team_image" name = "team_image" type="file" class="form-control"><br>
-        </div>
-
-        <div class="form-group">
-            <label for="address">Mclean Profile Photo</label><br>
-                <img id="mclean_preview" src="{{ url('website/'.$website_information->mclean_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="mclean_image" name = "mclean_image" type="file" class="form-control"><br>
-        </div>
+        </div>         
 
 
-        <button class = 'btn btn-primary' type ='submit'>Update</button>
+        <button class = 'btn btn-primary' type ='submit'>Guardar</button>
     </form>
 </div>
 </div>

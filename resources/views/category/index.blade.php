@@ -5,22 +5,21 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>All Categories</h3>
+    <h3>Todas las categorías</h3>
 </div>
     <div class="box-body">
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><i class="fa fa-tags"></i> categories</li>
+        <li class="active"><i class="fa fa-tags"></i> categorías</li>
     </ol>
 
-        <a href='{!!url("category")!!}/create' class = "btn btn-primary"><i class="fa fa-plus fa-md" aria-hidden="true"></i> New</a>        
+        <a href='{!!url("category")!!}/create' class = "btn btn-primary"><i class="fa fa-plus fa-md" aria-hidden="true"></i> Nuevo</a>        
         <div class="table-responsive">
     <table class="table table-hover">
         <thead>
-            <th>Name</th>
-            <th>Projects</th>
-            <th>Actions</th>
+            <th>Nombre</th>
+            <th>Proyectos</th>
         </thead>
         <tbody>
             @foreach($categories as $category) 

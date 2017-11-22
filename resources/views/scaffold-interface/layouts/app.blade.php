@@ -46,13 +46,11 @@
 							<!-- END notification navbar list-->
 							<li class="dropdown user user-menu">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									<img src="http://ahloman.net/wp-content/uploads/2013/06/user.jpg" class="user-image" alt="User Image">
 									<span class="hidden-xs">{{Auth::user()->name}}</span>
 								</a>
 								<ul class="dropdown-menu">
 									<!-- User image -->
 									<li class="user-header">
-										<img src="http://ahloman.net/wp-content/uploads/2013/06/user.jpg" class="img-circle" alt="User Image">
 										<p>
 											{{Auth::user()->name}}
 										</p>
@@ -96,7 +94,7 @@
 							</li>
 							<li class="treeview {{ Request::path() == 'team_member' ? 'active' : '' }}">
 								<a href="{{url('team_member')}}">
-									<i class="fa fa-heart"></i> <span>Equipo</span></i>
+									<i class="fa fa-users"></i> <span>Equipo</span></i>
 								</a>
 							</li>
 							<li class="treeview {{ Request::path() == 'category' ? 'active' : '' }}">
@@ -109,12 +107,12 @@
 						
 							<li class="treeview {{ Request::path() == 'project' ? 'active' : '' }}">
 								<a href="{{url('project')}}">
-									<i class="fa fa-code"></i> <span>Proyectos</span></i>
+									<i class="fa fa-pencil"></i> <span>Proyectos</span></i>
 								</a>
 							</li>
 						
 							<li class="header">ADMINISTRATOR</li>
-							<li class="treeview {{ Request::path() == 'scaffold-users' ? 'active' : '' }}"><a href="{{url('/scaffold-users')}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
+							<li class="treeview {{ Request::path() == 'scaffold-users' ? 'active' : '' }}"><a href="{{url('/scaffold-users')}}"><i class="fa fa-cog"></i> <span>Usuarios</span></a></li>
 
 					</ul>
 				</section>

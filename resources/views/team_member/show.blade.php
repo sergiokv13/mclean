@@ -11,7 +11,7 @@
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/team_member"><i class="fa fa fa-code"></i> equipo</a></li>
+        <li><a href="/team_member"><i class="fa fa fa-users"></i> equipo</a></li>
         <li class="active">{{$team_member->name}}</li>
     </ol>
 
@@ -28,13 +28,13 @@
                   </div>
 
                   <div class="col-md-6">
-                    <strong> Welcome title </strong> <p>{{$team_member->welcome_title}}</p>
-                    <strong> Position </strong> <p>{{$team_member->position}}</p>
-                    <strong> About Team Member </strong> <p>{{$team_member->about_team_member}}</p>
-                    <strong> Facebook link </strong> <p>{{$team_member->facebook_link}}</p>
-                    <strong> Google Plus Link </strong> <p>{{$team_member->google_link}}</p>
-                    <strong> Twitter Link </strong> <p>{{$team_member->twitter_link}}</p>
-                    <strong> Linkedin Link </strong> <p>{{$team_member->linkedin_link}}</p>
+                    <strong> Cargo </strong> <p>{{$team_member->position}}</p>
+                    <strong> Texto de bienvenida </strong> <p>{{$team_member->welcome_title}}</p>
+                    <strong> Texto de presentación </strong> <p>{{$team_member->about_team_member}}</p>
+                    <strong> URL Facebook </strong> <p>{{$team_member->facebook_link}}</p>
+                    <strong> URL Google Plus </strong> <p>{{$team_member->google_link}}</p>
+                    <strong> URL Twitter </strong> <p>{{$team_member->twitter_link}}</p>
+                    <strong> URL Linkedin </strong> <p>{{$team_member->linkedin_link}}</p>
                     
                   </div>
 

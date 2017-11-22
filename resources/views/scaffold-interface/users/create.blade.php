@@ -3,30 +3,30 @@
 <section class="content">
 	<div class="box box-primary">
 		<div class="box-header">
-			<h3>Create new user</h3>
+			<h3>Crear nuevo usuario</h3>
 		</div>
 		<div class="box-body">
 	<ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/scaffold-users"><i class="fa fa-group"></i> users</a></li>
-        <li class="active"> create</li>
+        <li><a href="/scaffold-users"><i class="fa fa-group"></i> usuarios</a></li>
+        <li class="active"> nuevo</li>
     </ol>
 			<form action="{{url('scaffold-users/store')}}" method = "post">
 				{!! csrf_field() !!}
 				<input type="hidden" name = "user_id">
 				<div class="form-group">
-					<label for="">Email</label>
-					<input type="email" name = "email" class = "form-control" placeholder = "Email">
+					<label for="">Correo electrónico</label>
+					<input type="email" name = "email" class = "form-control" placeholder = "Correo electrónico">
 				</div>
 				<div class="form-group">
-					<label for="">Name</label>
-					<input type="text" name = "name" class = "form-control" placeholder = "Name">
+					<label for="">Nombre</label>
+					<input type="text" class = "form-control" placeholder = "Nombre">
 				</div>
 				<div class="form-group">
-					<label for="">Password</label>
-					<input type="password" name = "password" class = "form-control" placeholder = "Password">
+					<label for="">Contraseña</label>
+					<input type="password" name = "password" class = "form-control" placeholder = "contraseña">
 				</div>
-				<button class = "btn btn-primary" type="submit">Create</button>
+				<button class = "btn btn-primary" type="submit">Crear</button>
 			</form>
 		</div>
 	</div>

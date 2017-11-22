@@ -26,9 +26,9 @@
 						<p>Administración de usuarios</p>
 					</div>
 					<div class="icon">
-						<i class="fa fa-group"></i>
+						<i class="fa fa-cog"></i>
 					</div>
-					<a href="{{url('scaffold-users')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+					<a href="{{url('scaffold-users')}}" class="small-box-footer">Ver <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
 			</div>
 
@@ -55,7 +55,7 @@
 						<p>Administración de la sección equipo</p>
 					</div>
 					<div class="icon">
-						<i class="fa fa-heart"></i>
+						<i class="fa fa-users"></i>
 					</div>
 					<a href="/team_members" class="small-box-footer">Ver <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
@@ -84,7 +84,7 @@
 					<p>dministración de proyectos</p>
 				</div>
 				<div class="icon">
-					<i class="fa fa-code"></i>
+					<i class="fa fa-pencil"></i>
 				</div>
 				<a href="/project" class="small-box-footer">Ver <i class="fa fa-arrow-circle-right"></i></a>
 			</div>
