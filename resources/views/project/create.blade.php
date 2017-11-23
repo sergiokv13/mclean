@@ -40,9 +40,14 @@
                 <img id="project_preview" src="#" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="project_image" name = "project_image" type="file" class="validate"><br>
         </div><br>
-        <div class="input-field col s6">
-            <label>Add Document</label>
-            <input id="project_document[]" name = "project_document[]" type="file" class="validate"><br>
+        <div class="input-field col s6" style="display: inline;">
+            <label>Add Gallery 1</label>
+            <div class="row">
+                <div class="col-lg-12">
+                    <input id="project_document_name[]" name = "project_document_name[]" placeholder="Document name" type="text" class="validate form-control" >    
+                    <input id="project_document[]" name = "project_document[]" type="file" class="validate">    
+                </div>
+            </div>    
         </div><br>
 
         <div class="extra-documents">
@@ -84,12 +89,13 @@
 
     $(".documentAdd").click(function(){
         document_counter += 1;
-        var field = $('<div><div class="input-field col s6 extraDoc'+ document_counter +'"><label>Add Document</label><input id="project_document[]" name ="project_document[]" type="file" class="validate"><br></div><br></div>');
-        var button = $('<a id="removeDoc" class="btn btn-danger documentRemove">X</a>');
+        var field = $('<div class="input-field col s6 extraDoc'+ document_counter +'"><label>Add Document '+ document_counter +'</label><input id="project_document_name[]" name = "project_document_name[]" placeholder="Document name" type="text" class="validate form-control" ><input id="project_document[]" name = "project_document[]" type="file" class="validate"></div>');
+        var button = $('<a id="removeDoc" documentRemove">Delete Document ' + document_counter + '</a>');
         field.append(button);
         button.click(remove_field);
         $(".extra-documents").append(field);
         $('input[name=document_counter]').val(document_counter);
+
     });
 
     remove_field = function(){
