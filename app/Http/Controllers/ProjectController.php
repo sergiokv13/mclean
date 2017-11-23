@@ -92,12 +92,13 @@ class ProjectController extends Controller
             $document = new Document();
 
             if ($request->project_document[$i] != null) {
-                
-                $pro_document = time().'.'.$request->project_document[$i]->getClientOriginalExtension();
+
+                $document->name = $request->project_document_name[$i];
+
+                $pro_document = $document->name.'.'.$request->project_document[$i]->getClientOriginalExtension();
 
                 $request->project_document[$i]->move(public_path('projects/documents'), $pro_document);
 
-                $document->name = $pro_document;
                 $document->url = $pro_document;
                 
                 $document->project_id = $project->id;
