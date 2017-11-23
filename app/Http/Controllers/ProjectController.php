@@ -72,12 +72,15 @@ class ProjectController extends Controller
 
         $project->category_id = $request->category;
 
-        
-        $image_name = time().'.'.$request->project_image->getClientOriginalExtension();
-        
-        $request->project_image->move(public_path('projects'), $image_name);
 
-        $project->project_image = $image_name;
+        if ($request->project_image != null) {
+
+            $image_name = time().'.'.$request->project_image->getClientOriginalExtension();
+            
+            $request->project_image->move(public_path('projects'), $image_name);
+
+            $project->project_image = $image_name;
+        }
 
         $project->save();
 
@@ -88,16 +91,18 @@ class ProjectController extends Controller
         for ($i=0; $i < $number_of_documents; $i++) { 
             $document = new Document();
 
+            if ($request->project_document[$i] != null) {
+                
+                $pro_document = time().'.'.$request->project_document[$i]->getClientOriginalExtension();
 
-            $pro_document = time().'.'.$request->project_document[$i]->getClientOriginalExtension();
+                $request->project_document[$i]->move(public_path('projects/documents'), $pro_document);
 
-            $request->project_document[$i]->move(public_path('projects/documents'), $pro_document);
-
-            $document->name = $pro_document;
-            $document->url = $pro_document;
-            
-            $document->project_id = $project->id;
-            $document->save();   
+                $document->name = $pro_document;
+                $document->url = $pro_document;
+                
+                $document->project_id = $project->id;
+                $document->save();   
+            }
         }
 
         $role_name = 'Administrator in project '.$project->name.'-'.$project->id;
