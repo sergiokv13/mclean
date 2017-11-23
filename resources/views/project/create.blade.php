@@ -40,24 +40,6 @@
                 <img id="project_preview" src="#" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="project_image" name = "project_image" type="file" class="validate"><br>
         </div><br>
-        <div class="input-field col s6" style="display: inline;">
-            <label>Add Gallery 1</label>
-            <div class="row">
-                <div class="col-lg-12">
-                    <input id="project_document_name[]" name = "project_document_name[]" placeholder="Document name" type="text" class="validate form-control" >    
-                    <input id="project_document[]" name = "project_document[]" type="file" class="validate">    
-                </div>
-            </div>    
-        </div><br>
-
-        <div class="extra-documents">
-            
-        </div>
-
-        <input id="document_counter" name = "document_counter" type="hidden" class="validate" value="1"><br>
-
-        <a href="#" class="btn btn-primary documentAdd">Add Gallery Image</a>
-
 
         <button class = 'btn btn-primary' type ='submit'>Create</button>
     </form>

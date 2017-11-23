@@ -49,22 +49,6 @@
                 <input id="project_image" name = "project_image" type="file" class="validate"><br>
         </div><br>
 
-        <div class="input-field col s6">
-            <label>Add Document</label>
-            <input id="project_document[]" name = "project_document[]" type="file" class="validate"><br>
-        </div><br>
-
-        <div class="extra-documents">
-            
-        </div>
-
-        <input id="document_counter" name = "document_counter" type="hidden" class="validate" value="1"><br>
-
-        @foreach($project->documents as $document) 
-            <input id="project_document[]" name = "project_document[]" type="file" class="validate" value="{!!$document->url!!}"><br>
-        @endforeach 
-
-        <a href="#" class="btn btn-primary documentAdd">Add Document</a>
 
         <button class = 'btn btn-primary' type ='submit'>Update</button>
     </form>
