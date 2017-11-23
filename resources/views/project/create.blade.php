@@ -51,7 +51,7 @@
 
         <input id="document_counter" name = "document_counter" type="hidden" class="validate" value="1"><br>
 
-        <a href="#" class="btn btn-primary documentAdd">Add Document</a>
+        <a href="#" class="btn btn-primary documentAdd">Add Gallery Image</a>
 
 
         <button class = 'btn btn-primary' type ='submit'>Create</button>
