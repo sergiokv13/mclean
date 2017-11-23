@@ -84,28 +84,6 @@ class ProjectController extends Controller
 
         $project->save();
 
-        // create the documents
-
-        $number_of_documents = $request->document_counter;
-
-        for ($i=0; $i < $number_of_documents; $i++) { 
-            $document = new Document();
-
-            if ($request->project_document[$i] != null) {
-
-                $document->name = $request->project_document_name[$i];
-
-                $pro_document = $document->name.'.'.$request->project_document[$i]->getClientOriginalExtension();
-
-                $request->project_document[$i]->move(public_path('projects/documents'), $pro_document);
-
-                $document->url = $pro_document;
-                
-                $document->project_id = $project->id;
-                $document->save();   
-            }
-        }
-
         $role_name = 'Administrator in project '.$project->name.'-'.$project->id;
         Role::create(['name' => $role_name]);
 
@@ -201,7 +179,7 @@ class ProjectController extends Controller
 
         $project->name = $request->name;
 
-        $projectRole->name = 'Administrator in project '.$project->name.'-'.$project->id;
+        //$projectRole->name = 'Administrator in project '.$project->name.'-'.$project->id;
     	
         $project->description = $request->description;
 
@@ -220,7 +198,7 @@ class ProjectController extends Controller
         
         
         $project->save();
-        $projectRole->save();
+        #$projectRole->save();
 
         return redirect('project');
     }
@@ -280,13 +258,13 @@ class ProjectController extends Controller
 
         $document = new Document();
 
+        $document->name = $request->docName;
+
         $new_document = time().'.'.$request->docFile->getClientOriginalExtension();
 
         $request->docFile->move(public_path('projects/documents'), $new_document);
 
         $document->url = $new_document;
-
-        $document->name = $new_document;
 
         $document->project_id = $project->id;
 
@@ -315,7 +293,7 @@ class ProjectController extends Controller
 
         $document->url = $new_document;
 
-        $document->name = $new_document;
+        $document->name = $request->docName;
 
         $document->save();
 

@@ -30,11 +30,7 @@
                         <td>{!!$project->name!!}</td>
                         <td>{!!$project->category()->name!!}</td>
 
-                        @if ($project->documents->count() > 0)
-                            <td><a href="/project/{!!$project->id!!}/documents">Documents</a></td>
-                        @else
-                            <td>No existen imagenes en la galeria</td>
-                        @endif
+                        <td><a href="/project/{!!$project->id!!}/documents">Gallery</a></td>
                         
                         <td>
                             <div class = 'row'>

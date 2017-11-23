@@ -5,7 +5,7 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>{!!$documents->first()->project->name!!} documents</h3>
+    <h3>{!!$project->name!!} gallery</h3>
 </div>
     <div class="box-body">
 
@@ -29,7 +29,7 @@
 		            @foreach($documents as $document) 
 		                @if ((Auth::user()->Roles()->where('name','Administrator in project '.$document->project->name.'-'.$document->project->id)->get()->count() > 0) || (Auth::user()->Roles()->where('name','Administrator')->get()->count() > 0))
 		                    <tr>
-		                        <td><a href="/projects/documents/{!!$document->url!!}" target="_blank">{!!$document->url!!}</a> </td>
+		                        <td><a href="/projects/documents/{!!$document->url!!}" target="_blank">{!!$document->name!!}</a> </td>
 		                        <td><a href="/project/{!!$project->id!!}/documents/{!!$document->id!!}/edit">Edit</a></td>
 		                        <td><a href="/project/{!!$project->id!!}/documents/{!!$document->id!!}/delete">Delete</td>
 		                    </tr>

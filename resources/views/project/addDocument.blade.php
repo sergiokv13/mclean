@@ -13,7 +13,7 @@
 		    <ol class="breadcrumb">
 		        <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 		        <li><a href="/project"><i class="fa fa-code"></i> Projects</a></li>
-		        <li><a href="/project/{!!$project->id!!}/documents"><i class="fa fa-code"></i> Documents</a></li>
+		        <li><a href="/project/{!!$project->id!!}/documents"><i class="fa fa-code"></i> Gallery</a></li>
 		        <li class="active">edit</li>
 		    </ol>
 
@@ -22,8 +22,13 @@
 
 		        <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
 
+		         <div class="input-field col s6 form-group">
+		            <label for="name">Name</label>
+		            <input id="docName" name = "docName" type="text" class="validate form-control" > 
+		        </div>
+
 		        <div class="input-field col s6 form-group">
-		            <label for="name">Document</label>
+		            <label for="name">Image</label>
 		            <input id="docFile" name = "docFile" type="file" class="validate form-control" > 
 		        </div>
 
