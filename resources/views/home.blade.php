@@ -27,7 +27,7 @@ http://themeforest.net/user/owwwlab/
       <section id="header">
         <header class="major">
           <h1>Paul Mclean</h1>
-          <p>{{$website_information->welcome_text}}</a></p>
+          <p>{!!$website_information->welcome_text!!}</p>
         </header>
         <div class="container">
           <ul class="actions">
@@ -44,7 +44,7 @@ http://themeforest.net/user/owwwlab/
             <header class="major">
               <img src="{{ url('website/'.$website_information->mclean_image) }}"><h2></h2>
             </header>
-            <p>{{$website_information->about_me}}</p>
+            <p>{!!$website_information->about_me!!}</p>
           </div>
           <a href="#two" class="goto-next scrolly">Next</a>
         </div>
@@ -89,7 +89,7 @@ http://themeforest.net/user/owwwlab/
             <header class="major">
               <h2>Proyectos</h2>
             </header>
-            <p>{{$website_information->projects_text}}</p>
+            <p>{!!$website_information->projects_text!!}</p>
             <div class="ol-grid-filters">
               <ul class="default-filters">
                 <li class="active"><a style="border-bottom: none;" href="#" data-filter="*">Todos</a></li>
@@ -135,7 +135,7 @@ http://themeforest.net/user/owwwlab/
             <header class="major">
               <h2>Equipo</h2>
             </header>
-            <p>{{$website_information->team_text}}</p>
+            <p>{!!$website_information->team_text!!}</p>
           <a href="#footer" class="goto-next scrolly">Next</a>
 
               @foreach($team_members as $team_member) 

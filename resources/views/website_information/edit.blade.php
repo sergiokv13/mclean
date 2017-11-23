@@ -64,6 +64,7 @@
         </div>
 
         <div class="form-group">
+            {{ url('website/'.$website_information->projects_image)}}
             <label for="address">Imagen de fondo para proyectos</label><br>
                 <img id="projects_preview" src="{{ url('website/'.$website_information->projects_image)}}" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="projects_image" name = "projects_image" type="file" ><br>
@@ -79,6 +80,7 @@
         </div>
 
         <div class="form-group">
+            {{ url('website/'.$website_information->team_image)}}
             <label for="address">Imagen de fondo para equipo</label><br>
                 <img id="team_preview" src="{{ url('website/'.$website_information->team_image)}}" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="team_image" name = "team_image" type="file" ><br>
