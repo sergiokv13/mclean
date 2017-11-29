@@ -151,10 +151,10 @@ http://themeforest.net/user/owwwlab/
                                         <p>{{$team_member->about_team_member}}</p>
                                     </div>
                                     <div class="s-link">
-                                        <a href="{{$team_member->facebook_link}}" style="border-bottom: none;"><i class="fa fa-facebook"></i></a>
-                                        <a href="{{$team_member->twitter_link}}" style="border-bottom: none;"><i class="fa fa-twitter"></i></a>
-                                        <a href="{{$team_member->google_link}}" style="border-bottom: none;"><i class="fa fa-google-plus"></i></a>
-                                        <a href="{{$team_member->linkedin_link}}" style="border-bottom: none;"><i class="fa fa-linkedin"></i></a>
+                                        <a href="http://{{$team_member->facebook_link}}" style="border-bottom: none;"><i class="fa fa-facebook"></i></a>
+                                        <a href="http://{{$team_member->twitter_link}}" style="border-bottom: none;"><i class="fa fa-twitter"></i></a>
+                                        <a href="http://{{$team_member->googleplus_link}}" style="border-bottom: none;"><i class="fa fa-google-plus"></i></a>
+                                        <a href="http://{{$team_member->linkedin_link}}" style="border-bottom: none;"><i class="fa fa-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>

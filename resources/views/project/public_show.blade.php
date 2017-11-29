@@ -13,7 +13,7 @@ http://themeforest.net/user/owwwlab/
 <html class="is-touch">
   <!-- #####Begin head-->
   <head>
-    <title>MCLEAN</title>
+    <title>MACLEAN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css">
@@ -23,7 +23,7 @@ http://themeforest.net/user/owwwlab/
   </head>
   <!-- #####End head-->
   <body>
-    <CENTER><a href="/#three"><h2 style="margin-top: 20px; color:white;">Mclean Logo</h2></a></CENTER>
+    <CENTER><a href="/#three"><h2 style="margin-top: 20px; color:white;">Maclean Logo</h2></a></CENTER>
 
       <section id="two" class="main special">
         <div class="container">
