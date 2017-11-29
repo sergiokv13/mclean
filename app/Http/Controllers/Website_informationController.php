@@ -63,7 +63,7 @@ class Website_informationController extends Controller
 
         if ($request->about_image != null)
         {
-            $image_name = time().'.'.$request->about_image->getClientOriginalExtension();
+            $image_name = time()."about".'.'.$request->about_image->getClientOriginalExtension();
 
             $request->about_image->move(public_path('website'), $image_name);
             $website_information->about_image = $image_name;
@@ -71,7 +71,7 @@ class Website_informationController extends Controller
 
         if ($request->menu_image != null)
         {
-            $image_name = time().'.'.$request->menu_image->getClientOriginalExtension();
+            $image_name = time()."menu".'.'.$request->menu_image->getClientOriginalExtension();
 
             $request->menu_image->move(public_path('website'), $image_name);
             $website_information->menu_image = $image_name;
@@ -79,7 +79,7 @@ class Website_informationController extends Controller
 
         if ($request->projects_image != null)
         {
-            $image_name = time().'.'.$request->projects_image->getClientOriginalExtension();
+            $image_name = time()."project".'.'.$request->projects_image->getClientOriginalExtension();
 
             $request->projects_image->move(public_path('website'), $image_name);
             $website_information->projects_image = $image_name;
@@ -87,7 +87,7 @@ class Website_informationController extends Controller
 
         if ($request->team_image != null)
         {
-            $image_name = time().'.'.$request->team_image->getClientOriginalExtension();
+            $image_name = time()."team".'.'.$request->team_image->getClientOriginalExtension();
 
             $request->team_image->move(public_path('website'), $image_name);
             $website_information->team_image = $image_name;
@@ -172,7 +172,7 @@ class Website_informationController extends Controller
 
         if ($request->about_image != null)
         {
-            $image_name = time().'.'.$request->about_image->getClientOriginalExtension();
+            $image_name = time()."about".'.'.$request->about_image->getClientOriginalExtension();
 
             $request->about_image->move(public_path('website'), $image_name);
             $website_information->about_image = $image_name;
@@ -180,7 +180,7 @@ class Website_informationController extends Controller
 
         if ($request->menu_image != null)
         {
-            $image_name = time().'.'.$request->menu_image->getClientOriginalExtension();
+            $image_name = time()."menu".'.'.$request->menu_image->getClientOriginalExtension();
 
             $request->menu_image->move(public_path('website'), $image_name);
             $website_information->menu_image = $image_name;
@@ -188,7 +188,7 @@ class Website_informationController extends Controller
 
         if ($request->projects_image != null)
         {
-            $image_name = time().'.'.$request->projects_image->getClientOriginalExtension();
+            $image_name = time()."projects".'.'.$request->projects_image->getClientOriginalExtension();
 
             $request->projects_image->move(public_path('website'), $image_name);
             $website_information->projects_image = $image_name;
@@ -196,7 +196,7 @@ class Website_informationController extends Controller
 
         if ($request->team_image != null)
         {
-            $image_name = time().'.'.$request->team_image->getClientOriginalExtension();
+            $image_name = time()."team".'.'.$request->team_image->getClientOriginalExtension();
 
             $request->team_image->move(public_path('website'), $image_name);
             $website_information->team_image = $image_name;
@@ -204,7 +204,7 @@ class Website_informationController extends Controller
 
         if ($request->mclean_image != null)
         {
-            $image_name = time().'.'.$request->mclean_image->getClientOriginalExtension();
+            $image_name = time()."mclean".'.'.$request->mclean_image->getClientOriginalExtension();
 
             $request->mclean_image->move(public_path('website'), $image_name);
             $website_information->mclean_image = $image_name;

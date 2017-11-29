@@ -12,7 +12,7 @@ http://themeforest.net/user/owwwlab/
 <html class="is-touch">
   <!-- #####Begin head-->
   <head>
-    <title>MCLEAN</title>
+    <title>MACLEAN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@ http://themeforest.net/user/owwwlab/
     <!-- Header -->
       <section id="header">
         <header class="major">
-          <h1>Paul Mclean</h1>
+          <h1>Maclean Logo</h1>
           <p>{!!$website_information->welcome_text!!}</p>
         </header>
         <div class="container">
@@ -60,11 +60,11 @@ http://themeforest.net/user/owwwlab/
             </header>
             <ul class="icons-grid">
               <li>
-                <a href="#four" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-home"></span></a>
+                <a href="#header" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-home"></span></a>
                 <h3>Inicio</h3>
               </li>
               <li>
-                <a href="#four" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-pencil"></span></a>
+                <a href="#three" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-pencil"></span></a>
                 <h3>Proyectos</h3>
               </li>
               <li>
@@ -72,7 +72,7 @@ http://themeforest.net/user/owwwlab/
                 <h3>Equipo</h3>
               </li>
               <li>
-                <a href="#four" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-envelope-open-o"></span></a>
+                <a href="#footer" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-envelope-open-o"></span></a>
                 <h3>Contacto</h3>
               </li>
             </ul>
@@ -84,7 +84,7 @@ http://themeforest.net/user/owwwlab/
     <!-- Three -->
       <section id="three" class="main special">
         <div class="container">
-          <span class="image fit primary"><img src="{{ url('website/'.$website_information->project_image) }}" alt="" /></span>
+          <span class="image fit primary"><img src="{{ url('website/'.$website_information->projects_image)}}" alt="" /></span>
           <div class="content" style="vertical-align: baseline !important;">
             <header class="major">
               <h2>Proyectos</h2>
@@ -181,9 +181,9 @@ http://themeforest.net/user/owwwlab/
           </header>
           <form method="post" action="#">
             <div class="row uniform">
-              <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-              <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-              <div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+              <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nombre" /></div>
+              <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Correo electrónico" /></div>
+              <div class="12u$"><textarea name="message" id="message" placeholder="Mensaje" rows="4"></textarea></div>
               <div class="12u$">
                 <ul class="actions">
                   <li><input type="submit" value="Send Message" class="special" /></li>
@@ -198,8 +198,7 @@ http://themeforest.net/user/owwwlab/
             <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
             <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
             <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon alt fa-dribbble"><span class="label">Dribbble</span></a></li>
-            <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+            <li><a href="#" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
           </ul>
 
            <div class="copyright" style="margin-bottom: 30px;">
@@ -210,7 +209,7 @@ http://themeforest.net/user/owwwlab/
           </div>
 
           <ul class="copyright">
-            <li>&copy; Mclean 2017</li><li>Design: <a href="www.expansesoft.com">Expanse Software</a></li><li>Images and videos: <a href="https://www.facebook.com/picture.contenidos/?timeline_context_item_type=intro_card_work&timeline_context_item_source=550169723&pnref=lhc">Picture</a></li>
+            <li>&copy; Maclean 2017</li><li>Development andDesign: <a href="www.expansesoft.com">Expanse Software</a></li><li>Images and videos: <a href="https://www.facebook.com/picture.contenidos/?timeline_context_item_type=intro_card_work&timeline_context_item_source=550169723&pnref=lhc">Picture</a></li>
           </ul>
         </footer>
       </section>

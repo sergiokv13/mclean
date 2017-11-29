@@ -131,9 +131,11 @@ class ProjectController extends Controller
             return URL::to('project/'.$id);
         }
 
+        $projects = Project::all();
         $project = Project::findOrfail($id);
+        $categories = Category::all();
         $projects_in_category = Project::where('category_id',$project->category()->id)->get();
-        return view('project.public_show',compact('title','project','website_information','projects_in_category'));
+        return view('project.public_show',compact('title','project','website_information','projects_in_category','projects','categories'));
     }
 
     /**

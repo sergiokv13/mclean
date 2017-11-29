@@ -57,7 +57,7 @@
 					<div class="icon">
 						<i class="fa fa-users"></i>
 					</div>
-					<a href="/team_members" class="small-box-footer">Ver <i class="fa fa-arrow-circle-right"></i></a>
+					<a href="/team_member" class="small-box-footer">Ver <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
 			</div>
 
