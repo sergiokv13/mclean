@@ -14,7 +14,17 @@
         <li><a href="/category"><i class="fa fa-tags"></i> categorías</a></li>
         <li class="active"></i> nueva</li>
     </ol>
-    
+        
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
 
     <form method = 'POST' action = '{!!url("category")!!}'>
         <input type = 'hidden' name = '_token' value = '{{ Session::token() }}'>

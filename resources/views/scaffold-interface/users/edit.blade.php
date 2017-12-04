@@ -15,6 +15,17 @@
 		        <li><a href="/scaffold-users"><i class="fa fa-cog"></i> usuarios</a></li>
 		        <li class="active"> editar</li>
 		    </ol>
+
+		     @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    
 			<form action="{{url('scaffold-users/update')}}" method = "post">
 				{!! csrf_field() !!}
 				<input type="hidden" name = "user_id" value = "{{$user->id}}">

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Team_member;
 use Amranidev\Ajaxis\Ajaxis;
+use Validator, Input, Redirect;
 use URL;
 
 /**
@@ -47,8 +48,29 @@ class Team_memberController extends Controller
      * @param    \Illuminate\Http\Request  $request
      * @return  \Illuminate\Http\Response
      */
+
+
     public function store(Request $request)
     {
+
+        $messsages = array(
+        'name.required'=>'El nombre es obligatorio.',
+        'position.required' => 'El cargo es obligatorio.',
+        'welcome_title.required' => 'El texto de bienvenida es obligatorio.',
+        'about_team_member.required'=>'El texto de presentación es obligatorio.', 
+        'member_image.required' => 'La imagen es obligatoria.',
+        );
+
+        $rules = array(
+            'name' => 'required',
+            'position' => 'required',
+            'welcome_title' => 'required',
+            'about_team_member' => 'required',
+            'member_image' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
         $team_member = new Team_member();
 
         
@@ -146,6 +168,23 @@ class Team_memberController extends Controller
      */
     public function update($id,Request $request)
     {
+
+        $messsages = array(
+        'name.required'=>'El nombre es obligatorio.',
+        'position.required' => 'El cargo es obligatorio.',
+        'welcome_title.required' => 'El texto de bienvenida es obligatorio.',
+        'about_team_member.required'=>'El texto de presentación es obligatorio.', 
+        );
+
+        $rules = array(
+            'name' => 'required',
+            'position' => 'required',
+            'welcome_title' => 'required',
+            'about_team_member' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
         $team_member = Team_member::findOrfail($id);
     	
         $team_member->name = $request->name;

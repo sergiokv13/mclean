@@ -15,6 +15,16 @@
         <li class="active">editar</li>
     </ol>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form method = 'POST' action = '{!! url("team_member")!!}/{!!$team_member->
         id!!}/update' enctype="multipart/form-data"> 
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>

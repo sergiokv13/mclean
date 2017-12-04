@@ -11,8 +11,18 @@
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><i class="fa fa-globe"></i> website information</li>
+        <li class="active"><i class="fa fa-globe"></i> información</li>
     </ol>
+
+     @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <form method = 'POST' action = '{!! url("website_information")!!}/{!!$website_information->
         id!!}/update' enctype="multipart/form-data" runat="server"> 

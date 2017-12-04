@@ -8,9 +8,19 @@
         <div class="box-body">
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/scaffold-users"><i class="fa fa-group"></i> equipo</a></li>
+        <li><a href="/team_member"><i class="fa fa-group"></i> equipo</a></li>
         <li class="active"> nuevo</li>
     </ol>
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <form method = 'POST' action = '{!!url("team_member")!!}' enctype="multipart/form-data" runat="server">
         <input type = 'hidden' name = '_token' value = '{{ Session::token() }}'>

@@ -152,6 +152,31 @@ class Website_informationController extends Controller
      */
     public function update($id,Request $request)
     {
+
+        $messsages = array(
+        'welcome_text.required'=>'El texto de bienvenida es obligatorio.',
+        'about_me.required' => 'El texto de sección sobre el arquitecto es obligatorio.',
+        'projects_text.required' => 'El texto de sección proyectos es obligatorio.',
+        'team_text.required'=>'El texto de sección equipo es obligatorio.', 
+        'contact_email.required' => 'El email de contacto es obligatorio.',
+        'contact_phone.required' => 'El telefono fijo de contacto es obligatorio.',
+        'contact_phone2.required' => 'El telefono celular de contacto es obligatorio.',
+        'address.required' => 'La dirección es olbigatoria.',
+        );
+
+        $rules = array(
+            'welcome_text' => 'required',
+            'about_me' => 'required',
+            'projects_text' => 'required',
+            'team_text' => 'required',
+            'contact_email' => 'required',
+            'contact_phone' => 'required',
+            'contact_phone2' => 'required',
+            'address' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
         $website_information = Website_information::findOrfail($id);
     	
         $website_information->welcome_text = $request->welcome_text;

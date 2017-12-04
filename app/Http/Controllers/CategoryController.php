@@ -66,7 +66,16 @@ class CategoryController extends Controller
     {
         $category = new Category();
 
-        
+        $messsages = array(
+        'name.required'=>'El nombre es obligatorio.',
+        );
+
+        $rules = array(
+            'name' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
         $category->name = $request->name;
 
         
@@ -121,6 +130,16 @@ class CategoryController extends Controller
      */
     public function update($id,Request $request)
     {
+        $messsages = array(
+        'name.required'=>'El nombre es obligatorio.',
+        );
+
+        $rules = array(
+            'name' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+        
         $category = Category::findOrfail($id);
     	
         $category->name = $request->name;

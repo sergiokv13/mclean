@@ -48,6 +48,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
+        $messsages = array(
+        'email.required' => 'El correo electronico es obligatorio.',
+        'password.required' => 'La contraseña es obligatoria.',
+        );
+
+        $rules = array(
+            'email' => 'required',
+            'password' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
         $user = new \App\User();
 
         $user->email = $request->email;
@@ -95,6 +108,20 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
+         $messsages = array(
+        'email.required' => 'El correo electronico es obligatorio.',
+        'name.required'=>'El nombre es obligatorio.',
+        'password.required' => 'La contraseña es obligatoria.',
+        );
+
+        $rules = array(
+            'email' => 'required',
+            'name' => 'required',
+            'password' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
         $user = \App\User::findOrfail($request->user_id);
 
         $user->email = $request->email;

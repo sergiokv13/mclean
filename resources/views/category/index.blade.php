@@ -56,7 +56,7 @@
 <script type="text/javascript">
     function delete_record(category_id)
     {
-        var res = confirm('Are you sure you want to delete this category? All related projects will be deleted.');
+        var res = confirm('Está seguro que desea eliminar esta categoría? Todos los proyectos que pertenecen a la misma serán eliminados.');
         if (res)
         {
             var token = $('#token').val();

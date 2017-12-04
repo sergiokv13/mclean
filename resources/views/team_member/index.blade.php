@@ -52,7 +52,7 @@
 <script type="text/javascript">
     function delete_record(member_id)
     {
-        var res = confirm('Are you sure you want to delete this member?');
+        var res = confirm('Está seguro que desea eliminar a este miembro?');
         if (res)
         {
             var token = $('#token').val();

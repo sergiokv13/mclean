@@ -11,7 +11,7 @@
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><i class="fa fa-cog"></i> proyectos</li>
+        <li class="active"><i class="fa fa-pencil"></i> proyectos</li>
     </ol>
     @if (Auth::user()->Roles()->where('name','Administrator')->get()->count() > 0)
     <a href='{!!url("project")!!}/create' class = "btn btn-primary"><i class="fa fa-plus fa-md" aria-hidden="true"></i> Nuevo</a>    
@@ -56,7 +56,7 @@
 <script type="text/javascript">
     function delete_record(project_id)
     {
-        var res = confirm('Are you sure you want to delete this project?');
+        var res = confirm('Está seguro que desea eliminar este proyecto?');
         if (res)
         {
             var token = $('#token').val();

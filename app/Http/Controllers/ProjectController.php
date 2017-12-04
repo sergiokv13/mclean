@@ -63,6 +63,24 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+
+        $messsages = array(
+        'name.required'=>'El nombre es obligatorio.',
+        'description.required' => 'La descripción del proyecto es obligatoria.',
+        'category.required' => 'La categoría es obligatoria.',
+        'project_image.required'=>'La imagen del proyecto es obligatoria.', 
+        );
+
+        $rules = array(
+            'name' => 'required',
+            'description' => 'required',
+            'category' => 'required',
+            'project_image' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
+
         $project = new Project();
 
        
@@ -173,6 +191,20 @@ class ProjectController extends Controller
      */
     public function update($id,Request $request)
     {
+           $messsages = array(
+        'name.required'=>'El nombre es obligatorio.',
+        'description.required' => 'La descripción del proyecto es obligatoria.',
+        'category.required' => 'La categoría es obligatoria.',
+        );
+
+        $rules = array(
+            'name' => 'required',
+            'description' => 'required',
+            'category' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
         $project = Project::findOrfail($id);
 
         $role_name = 'Administrator in project '.$project->name.'-'.$project->id;
@@ -256,6 +288,20 @@ class ProjectController extends Controller
 
     public function addNewDocument($project_id, Request $request)
     {
+
+        $messsages = array(
+        'docName.required'=>'El nombre es obligatorio.',
+        'docFile.required'=>'La imagen del proyecto es obligatoria.', 
+        );
+
+        $rules = array(
+            'docName' => 'required',
+            'docFile' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
+
+
         $project = Project::find($project_id);
 
         $document = new Document();
@@ -286,6 +332,20 @@ class ProjectController extends Controller
 
     public function updateDocument($project_id, $document_id, Request $request)
     {
+
+
+
+        $messsages = array(
+        'docName.required'=>'El nombre es obligatorio.',
+        'docFile.required'=>'La imagen del proyecto es obligatoria.', 
+        );
+
+        $rules = array(
+            'docName' => 'required',
+            'docFile' => 'required',
+        );
+
+        $this->validate($request, $rules, $messsages);
 
         $document = Document::find($document_id);
 

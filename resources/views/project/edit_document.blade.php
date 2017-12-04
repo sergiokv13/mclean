@@ -10,13 +10,29 @@
 		</div>
 		
 		<div class="box-body">
-		    <ol class="breadcrumb">
-		        <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-		        <li><a href="/project"><i class="fa fa-code"></i> Projects</a></li>
-		        <li><a href="/project/{!!$project->id!!}/documents"><i class="fa fa-code"></i> Gallery</a></li>
-		        <li class="active">edit</li>
-		    </ol>
+		 
+		 <ol class="breadcrumb">
+	        <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+	        <li><a href="/project"><i class="fa fa-pencil"></i> proyectos</a></li>
+	        <li class="active"> 
+	        	<a href="/project/{!!$project->id!!}/documents"> {!!$project->name!!} - Galería</a>
+	        </li>
+	       	<li class="active"> editar {!!$document->name!!}</li>
 
+	    </ol>
+
+
+
+     @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    
 		    <form method = 'POST' action = '{!! url("project")!!}/{!!$project->
 		        id!!}/documents/{!!$document->id!!}/update' enctype="multipart/form-data"> 
 

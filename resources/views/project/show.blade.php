@@ -11,7 +11,7 @@
 
     <ol class="breadcrumb">
         <li><a href="/scaffold-dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="/project"><i class="fa fa fa-pencil"></i> projects</a></li>
+        <li><a href="/project"><i class="fa fa fa-pencil"></i> proyectos</a></li>
         <li class="active">{{$project->name}}</li>
     </ol>
 
