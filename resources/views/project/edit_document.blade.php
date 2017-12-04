@@ -39,19 +39,40 @@
 		        <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
 
 		        <div class="input-field col s6 form-group">
-		            <label for="name">Name</label>
+		            <label for="name">Nombre</label>
 		            <input id="docName" name = "docName" type="text" class="validate form-control" value="{!!$document->name!!}" > 
 		        </div>
 
 		        <div class="input-field col s6 form-group">
-		            <label for="name">Gallery</label>
-		            <input id="docFile" name = "docFile" type="file" class="validate form-control" > 
+		            <label for="name">Imagen</label><br>
+		            <img id="docFile_preview" src="/projects/documents/{!!$document->url!!}" alt="The image preview will be displayed here." height="100px;"/>
+		            <input id="docFile" name = "docFile" type="file" > 
 		        </div>
 
-		        <button class='btn btn-primary' type ='submit'>Update</button>
+		        <button class='btn btn-primary' type ='submit'>Guardar</button>
 		    </form>
 		</div>
 	</div>
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	function readURL(input) {
+
+    if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#docFile_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#docFile").change(function(){
+        readURL(this);
+    });
+</script>
 
 @endsection

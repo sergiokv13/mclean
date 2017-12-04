@@ -337,31 +337,33 @@ class ProjectController extends Controller
 
         $messsages = array(
         'docName.required'=>'El nombre es obligatorio.',
-        'docFile.required'=>'La imagen del proyecto es obligatoria.', 
         );
 
         $rules = array(
             'docName' => 'required',
-            'docFile' => 'required',
         );
 
         $this->validate($request, $rules, $messsages);
 
         $document = Document::find($document_id);
 
-        $new_document = time().'.'.$request->docFile->getClientOriginalExtension();
+        if ($request->docFile != null)
+        {
+            $new_document = time().'.'.$request->docFile->getClientOriginalExtension();
 
-        $request->docFile->move(public_path('projects/documents'), $new_document);
+            $request->docFile->move(public_path('projects/documents'), $new_document);
 
-        $document->url = $new_document;
+            $document->url = $new_document;
+        }
 
         $document->name = $request->docName;
 
         $document->save();
 
         $documents = Project::find($project_id)->documents;
+        $project =  Project::find($project_id);
 
-        return view('project.documents', compact('documents'));
+        return view('project.documents', compact('documents','project'));
 
     }
 

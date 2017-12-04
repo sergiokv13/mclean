@@ -40,8 +40,9 @@
 		        </div>
 
 		        <div class="input-field col s6 form-group">
-		            <label for="name">Image</label>
-		            <input id="docFile" name = "docFile" type="file" class="validate form-control" > 
+		            <label for="name">Imagen</label><br>
+		            <img id="docFile_preview" src="#" alt="La imagen se mostrara aca." height="100px;"/>
+		            <input id="docFile" name = "docFile" type="file"> 
 		        </div>
 
 		        <button class='btn btn-primary' type ='submit'>Add</button>
@@ -49,5 +50,27 @@
 		</div>
 	</div>
 </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+	function readURL(input) {
+
+    if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#docFile_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#docFile").change(function(){
+        readURL(this);
+    });
+</script>
 
 @endsection
