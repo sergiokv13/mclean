@@ -60,7 +60,7 @@
 										<div class="pull-right">
 											<a href="{{url('logout')}}" class="btn btn-default btn-flat"
 												onclick="event.preventDefault();
-											document.getElementById('logout-form').submit();">Sign out</a>
+											document.getElementById('logout-form').submit();">Cerrar sesión.</a>
 											<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
 												{{ csrf_field() }}
 											</form>

@@ -14,7 +14,7 @@
 Route::get('/', 'main@index');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'main@index')->name('home');
 
 Route::get('/no_authorization', 'HomeController@no_authorization')->name('no_authorization');
 

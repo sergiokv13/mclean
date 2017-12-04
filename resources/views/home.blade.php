@@ -23,6 +23,13 @@ http://themeforest.net/user/owwwlab/
   <!-- #####End head-->
     <body>
 
+    @if(Auth::user() != null)
+
+      <div style="text-align: center; background-color: white; width: 50%; border-radius: 5px; margin:auto;">
+        Usted inicio sesión como {{Auth::user()->name}}. <br> <a href="/scaffold-dashboard">Ir al dashboard.</a>
+      </div> 
+
+    @endif
     <!-- Header -->
       <section id="header">
         <header class="major">
