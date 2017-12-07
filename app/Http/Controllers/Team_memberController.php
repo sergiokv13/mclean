@@ -80,16 +80,16 @@ class Team_memberController extends Controller
         $team_member->about_team_member = $request->about_team_member;
 
         
-        $team_member->facebook_link = $request->facebook_link;
+        $team_member->facebook_link = "";
 
         
-        $team_member->googleplus_link = $request->googleplus_link;
+        $team_member->googleplus_link = "";
 
         
-        $team_member->twitter_link = $request->twitter_link;
+        $team_member->twitter_link = "";
 
         
-        $team_member->linkedin_link = $request->linkedin_link;
+        $team_member->linkedin_link = "";
 
         $team_member->welcome_title = $request->welcome_title;
 

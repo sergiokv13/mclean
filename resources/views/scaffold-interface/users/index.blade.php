@@ -38,7 +38,7 @@
 					</td>
 					<td>
 						<a href="{{url('/scaffold-users/edit')}}/{{$user->id}}" class = 'btn btn-primary btn-sm'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-						@if (Auth::user()->Roles()->where('name','Administrator')->get()->count() > 0)
+						@if (Auth::user()->id != $user->id)
 							<a href="{{url('scaffold-users/delete')}}/{{$user->id}}" class = "btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?');"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 						@endif
 					</td>

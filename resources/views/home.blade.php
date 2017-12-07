@@ -19,13 +19,28 @@ http://themeforest.net/user/owwwlab/
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
      <link href="{{ asset('css/vendors/vendors-overwrites.css') }}" rel="stylesheet" type="text/css">
+
+     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/skel.min.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/util.js') }}"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
+
+         <script src="{{ asset('js/vendors/vendors.js') }} "></script>
+    <!-- Only for local and can be removed on server-->
+
+    <script src="{{ asset('js/custom.js') }}"></script>
+
   </head>
   <!-- #####End head-->
     <body>
 
     @if(Auth::user() != null)
 
-      <div style="text-align: center; background-color: white; width: 50%; border-radius: 5px; margin:auto;">
+      <div style="text-align: center; background-color: white; width: 50%;margin:auto;">
         Usted inicio sesión como {{Auth::user()->name}}. <br> <a href="/scaffold-dashboard">Ir al dashboard.</a>
       </div> 
 
@@ -157,12 +172,6 @@ http://themeforest.net/user/owwwlab/
                                         <h4>{{$team_member->welcome_title}}</h4>
                                         <p>{{$team_member->about_team_member}}</p>
                                     </div>
-                                    <div class="s-link">
-                                        <a href="http://{{$team_member->facebook_link}}" style="border-bottom: none;"><i class="fa fa-facebook"></i></a>
-                                        <a href="http://{{$team_member->twitter_link}}" style="border-bottom: none;"><i class="fa fa-twitter"></i></a>
-                                        <a href="http://{{$team_member->googleplus_link}}" style="border-bottom: none;"><i class="fa fa-google-plus"></i></a>
-                                        <a href="http://{{$team_member->linkedin_link}}" style="border-bottom: none;"><i class="fa fa-linkedin"></i></a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="team-title">
@@ -222,19 +231,7 @@ http://themeforest.net/user/owwwlab/
       </section>
 
     <!-- Scripts -->
-      <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/skel.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/util.js') }}"></script>
-      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-
-
-         <script src="{{ asset('js/vendors/vendors.js') }} "></script>
-    <!-- Only for local and can be removed on server-->
-
-    <script src="{{ asset('js/custom.js') }}"></script>
+      
 
 
 

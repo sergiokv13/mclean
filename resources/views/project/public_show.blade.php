@@ -20,6 +20,20 @@ http://themeforest.net/user/owwwlab/
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
      <link href="{{ asset('css/vendors/vendors-overwrites.css') }}" rel="stylesheet" type="text/css">
+     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/skel.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/util.js') }}"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
+
+  <script src="{{ asset('js/vendors/vendors.js') }} "></script>
+    <!-- Only for local and can be removed on server-->
+
+  <script src="{{ asset('js/custom.js') }}"></script>
+  
   </head>
   <!-- #####End head-->
   <body>
@@ -84,16 +98,4 @@ http://themeforest.net/user/owwwlab/
   </body>
 </html>
 
-  <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/skel.min.js') }}"></script>
-      <script type="text/javascript" src="{{ asset('js/util.js') }}"></script>
-      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-
-
-         <script src="{{ asset('js/vendors/vendors.js') }} "></script>
-    <!-- Only for local and can be removed on server-->
-
-    <script src="{{ asset('js/custom.js') }}"></script>
+  

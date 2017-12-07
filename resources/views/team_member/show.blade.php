@@ -31,10 +31,6 @@
                     <strong> Cargo </strong> <p>{{$team_member->position}}</p>
                     <strong> Texto de bienvenida </strong> <p>{{$team_member->welcome_title}}</p>
                     <strong> Texto de presentación </strong> <p>{{$team_member->about_team_member}}</p>
-                    <strong> URL Facebook </strong> <p>{{$team_member->facebook_link}}</p>
-                    <strong> URL Google Plus </strong> <p>{{$team_member->google_link}}</p>
-                    <strong> URL Twitter </strong> <p>{{$team_member->twitter_link}}</p>
-                    <strong> URL Linkedin </strong> <p>{{$team_member->linkedin_link}}</p>
                     
                   </div>
 

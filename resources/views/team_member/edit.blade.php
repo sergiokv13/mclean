@@ -51,27 +51,6 @@
             <input id="about_team_member" name = "about_team_member" type="text" class="form-control" value="{!!$team_member->
             about_team_member!!}"> 
         </div>
-        <div class="form-group ">
-            <label for="facebook_link">URL Facebook</label>
-            <input id="facebook_link" name = "facebook_link" type="text" class="form-control" value="{!!$team_member->
-            facebook_link!!}"> 
-        </div>
-        <div class="form-group ">
-            <label for="googleplus_link">URL Google Plus</label>
-            <input id="googleplus_link" name = "googleplus_link" type="text" class="form-control" value="{!!$team_member->
-            googleplus_link!!}"> 
-        </div>
-        <div class="form-group ">
-            <label for="twitter_link">URL Twitter</label>
-            <input id="twitter_link" name = "twitter_link" type="text" class="form-control" value="{!!$team_member->
-            twitter_link!!}"> 
-        </div>
-        <div class="form-group ">
-            <label for="linkedin_link">URL Linkedin</label>
-            <input id="linkedin_link" name = "linkedin_link" type="text" class="form-control" value="{!!$team_member->
-            linkedin_link!!}"> 
-        </div>
-
          <div class="form-group">
                 <img id="member_preview" src="{{ url('members/'.$team_member->member_image)}}" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="member_image" name = "member_image" type="file" class="form-control"><br>

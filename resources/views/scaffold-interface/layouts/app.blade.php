@@ -46,19 +46,19 @@
 							<!-- END notification navbar list-->
 							<li class="dropdown user user-menu">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									<span class="hidden-xs">{{Auth::user()->name}}</span>
+									<span >{{Auth::user()->name}}</span>
 								</a>
 								<ul class="dropdown-menu">
 									<!-- User image -->
 									<li class="user-header">
 										<p>
-											{{Auth::user()->name}}
+											<img src="{{ url('img/blank_profile.png') }}" width="50%;">
 										</p>
 									</li>
 									<!-- Menu Footer-->
 									<li class="user-footer">
 										<div class="pull-right">
-											<a href="{{url('logout')}}" class="btn btn-default btn-flat"
+											<a href="{{url('logout')}}" class="btn btn-default "
 												onclick="event.preventDefault();
 											document.getElementById('logout-form').submit();">Cerrar sesión.</a>
 											<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
