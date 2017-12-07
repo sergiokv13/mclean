@@ -26,6 +26,7 @@
 
     <form method = 'POST' action = '{!! url("website_information")!!}/{!!$website_information->
         id!!}/update' enctype="multipart/form-data" runat="server"> 
+        
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
 
         <h2>Sección de portada </h2>
@@ -74,7 +75,6 @@
         </div>
 
         <div class="form-group">
-            {{ url('website/'.$website_information->projects_image)}}
             <label for="address">Imagen de fondo para proyectos</label><br>
                 <img id="projects_preview" src="{{ url('website/'.$website_information->projects_image)}}" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="projects_image" name = "projects_image" type="file" ><br>

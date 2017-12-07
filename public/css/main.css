@@ -1353,7 +1353,7 @@
 		color: #6f7577;
 		font-family: "helveticaneue", "Helvetica", sans-serif;
 		font-size: 15pt;
-		font-weight: 500;
+		font-weight: lighter;
 		line-height: 1.75em;
 	}
 
@@ -1388,7 +1388,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #61686b;
-		font-weight: 800;
+		font-weight: 100;
 		letter-spacing: 0.075em;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -1457,6 +1457,7 @@
 	code {
 		background: rgba(144, 144, 144, 0.075);
 		font-family: "Courier New", monospace;
+		font-weight: 100;
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -1888,7 +1889,6 @@
 	header p {
 		color: #a8b0b3;
 		letter-spacing: 0.05em;
-		text-transform: uppercase;
 	}
 
 	header h1 + p {
@@ -2731,8 +2731,9 @@ img {
 				}
 
 			#header header p {
-				color: #ffffff;
-				font-weight: 700;
+				color: white;
+				font-weight: 100;
+				letter-spacing: 0.3em;
 				margin: 1.5em 0 0 0;
 			}
 

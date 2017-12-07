@@ -47,15 +47,11 @@ http://themeforest.net/user/owwwlab/
     @endif
     <!-- Header -->
       <section id="header">
-        <header class="major">
-          <h1>Maclean Logo</h1>
-          <p>{!!$website_information->welcome_text!!}</p>
+        <header class="major"> 
+          <img src={{url("img/logo.png")}}>
+          <p style="margin-top: -40px; color:black !important;">{!!$website_information->welcome_text!!}</p>
         </header>
-        <div class="container">
-          <ul class="actions">
-            <li><a href="#one" class="button special scrolly">Conoce más</a></li>
-          </ul>
-        </div>
+       
       </section>
 
     <!-- One -->
@@ -83,19 +79,19 @@ http://themeforest.net/user/owwwlab/
             <ul class="icons-grid">
               <li>
                 <a href="#header" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-home"></span></a>
-                <h3>Inicio</h3>
+                INICIO
               </li>
               <li>
                 <a href="#three" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-pencil"></span></a>
-                <h3>Proyectos</h3>
+                PROYECTOS
               </li>
               <li>
                 <a href="#four" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-users"></span></a>
-                <h3>Equipo</h3>
+                EQUIPO
               </li>
               <li>
                 <a href="#footer" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-envelope-open-o"></span></a>
-                <h3>Contacto</h3>
+                CONTACTO
               </li>
             </ul>
           </div>
