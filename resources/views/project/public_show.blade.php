@@ -37,7 +37,7 @@ http://themeforest.net/user/owwwlab/
   </head>
   <!-- #####End head-->
   <body>
-    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;">Maclean Logo</h2></a></CENTER>
+    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;"> <img src={{url("img/logo.png")}}></h2></a></CENTER>
 
       <section id="two" class="main special">
         <div class="container">
@@ -57,7 +57,7 @@ http://themeforest.net/user/owwwlab/
                   <div class="grid-item cat_{!!$project->category()->id!!}">
                     <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/documents/'.$document->url)}} " alt="image hover">
                       <div class="ol-overlay ov-dark-alpha-80">
-                         <h1 style="background-color: white; padding-top: 3px;">HOLA!</h1>
+                         <h1 style="background-color: white; padding-top: 3px; outline: none;">{{$document->name}}</h1>
                       </div>
                       <div class="icons"><a style="border-bottom: none;" href="{{ url('projects/documents/'.$document->url)}} " class="ol-lightbox"><i class="fa fa-search"></i></a></div>
                     </div>
