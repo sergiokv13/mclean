@@ -8,6 +8,20 @@
 /* Reset */
 
 
+	#conocemas{
+		 -webkit-transition: opacity 0.8s ease-in-out;
+	    -moz-transition: opacity 0.8s ease-in-out;
+	    -ms-transition: opacity 0.8s ease-in-out;
+	    -o-transition: opacity 0.8s ease-in-out;
+	    transition: opacity 0.8s ease-in-out;
+	    opacity: 1;
+	}
+	#conocemas:hover{
+		 opacity: 0.6;
+	}
+	#conocemas a{
+		outline: 0 !important;  border: 0 !important;
+	}
 	@font-face {
 	    font-family: helveticaneue;
 	    src: url("fonts/helv.otf");

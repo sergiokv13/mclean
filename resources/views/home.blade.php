@@ -47,9 +47,13 @@ http://themeforest.net/user/owwwlab/
     @endif
     <!-- Header -->
       <section id="header">
-        <header class="major"> 
-          <img src={{url("img/logo.png")}}>
-          <a href="#one" class="goto-next scrolly"><p style="margin-top: -40px;">{!!$website_information->welcome_text!!}</p></a>
+          <header class="major"> 
+            <div id="conocemas">
+              <a href="#one" class="goto-next scrolly">
+                <img src={{url("img/logo.png")}}>
+                <p style="margin-top: -40px;">{!!$website_information->welcome_text!!}</p>
+              </a>
+            </div>
         </header>
       </section>
 
