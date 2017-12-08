@@ -49,9 +49,8 @@ http://themeforest.net/user/owwwlab/
       <section id="header">
         <header class="major"> 
           <img src={{url("img/logo.png")}}>
-          <p style="margin-top: -40px; color:black !important;">{!!$website_information->welcome_text!!}</p>
+          <a href="#one" class="goto-next scrolly"><p style="margin-top: -40px;">{!!$website_information->welcome_text!!}</p></a>
         </header>
-       
       </section>
 
     <!-- One -->
@@ -145,7 +144,6 @@ http://themeforest.net/user/owwwlab/
         </div>
       </section>
 
-      <!-- Three -->
       <section id="four" class="main special">
         <div class="container">
           <span class="image fit primary"><img src="{{ url('website/'.$website_information->team_image) }}" alt="" /></span>
