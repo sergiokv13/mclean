@@ -85,7 +85,7 @@ http://themeforest.net/user/owwwlab/
                 PROYECTOS
               </li>
               <li>
-                <a href="#four" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-users"></span></a>
+                <a href="#team" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-users"></span></a>
                 EQUIPO
               </li>
               <li>
@@ -140,11 +140,11 @@ http://themeforest.net/user/owwwlab/
               </div>
 
           </div>
-          <a href="#four" class="goto-next scrolly">Next</a>
+          <a href="#team" class="goto-next scrolly">Next</a>
         </div>
       </section>
 
-      <section id="four" class="main special">
+      <section id="team" class="main special">
         <div class="container">
           <span class="image fit primary"><img src="{{ url('website/'.$website_information->team_image) }}" alt="" /></span>
           <div class="content">
