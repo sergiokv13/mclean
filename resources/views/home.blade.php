@@ -219,7 +219,7 @@ http://themeforest.net/user/owwwlab/
           </div>
 
           <ul class="copyright">
-            <li>&copy; Maclean 2017</li><li>Development andDesign: <a href="www.expansesoft.com">Expanse Software</a></li><li>Images and videos: <a href="https://www.facebook.com/picture.contenidos/?timeline_context_item_type=intro_card_work&timeline_context_item_source=550169723&pnref=lhc">Picture</a></li>
+            <li>&copy; Maclean 2017</li><li>Development and Design: <a href="www.expansesoft.com">Expanse Software</a></li><li>Images and videos: <a href="https://www.facebook.com/picture.contenidos/?timeline_context_item_type=intro_card_work&timeline_context_item_source=550169723&pnref=lhc">Picture</a></li>
           </ul>
         </footer>
       </section>
