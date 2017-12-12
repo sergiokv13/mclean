@@ -50,7 +50,7 @@ http://themeforest.net/user/owwwlab/
           <header class="major"> 
             <div id="conocemas">
               <a href="#one" class="goto-next scrolly">
-                <img src={{url("img/logo.png")}}>
+                <img src={{url("img/logo.png")}} id="logotipo">
                 <p style="margin-top: -40px;">{!!$website_information->welcome_text!!}</p>
               </a>
             </div>
@@ -81,20 +81,19 @@ http://themeforest.net/user/owwwlab/
             </header>
             <ul class="icons-grid">
               <li>
-                <a href="#header" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-home"></span></a>
-                INICIO
+                <a  href="#header" class="scrolly" style="color:#6f7577; border-bottom: none; "> INICIO</a>
+                
               </li>
               <li>
-                <a href="#three" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-pencil"></span></a>
-                PROYECTOS
+                <a  href="#three" class="scrolly" style="color:#6f7577; border-bottom: none; "> PROYECTOS</a>
+                
               </li>
               <li>
-                <a href="#team" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-users"></span></a>
-                EQUIPO
+                <a  href="#team" class="scrolly" style="color:#6f7577; border-bottom: none; "> EQUIPO</a>
+                
               </li>
               <li>
-                <a href="#footer" class="scrolly" style="color:#6f7577;"> <span class="icon major fa-envelope-open-o"></span></a>
-                CONTACTO
+                <a  href="#footer" class="scrolly" style="color:#6f7577; border-bottom: none; "> CONTACTO</a>
               </li>
             </ul>
           </div>
@@ -113,9 +112,9 @@ http://themeforest.net/user/owwwlab/
             <p>{!!$website_information->projects_text!!}</p>
             <div class="ol-grid-filters">
               <ul class="default-filters">
-                <li class="active"><a style="border-bottom: none;" href="#" data-filter="*">Todos</a></li>
+                <li  class="active"><a style="border-bottom: none;" href="#" data-filter="*">Todos</a></li>
                 @foreach($categories as $category) 
-                  <li><a style="border-bottom: none;" href="#" data-filter=".cat_{!!$category->id!!}">{!!$category->name!!}</a></li>
+                  <li ><a style="border-bottom: none;" href="#" data-filter=".cat_{!!$category->id!!}">{!!$category->name!!}</a></li>
                 @endforeach 
               </ul>
               <div class="select-filters">
@@ -165,19 +164,9 @@ http://themeforest.net/user/owwwlab/
                                 <div class="team-img">
                                     <img src="{{ url('members/'.$team_member->member_image)}}" alt="team member" class="img-responsive">
                                 </div>
-                                <div class="team-hover">
-                                    <div class="desk">
-                                        <h4>{{$team_member->welcome_title}}</h4>
-                                        <p>{{$team_member->about_team_member}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-title">
-                                <h5>{{$team_member->name}}</h5>
-                                <span>{{$team_member->position}}</span>
                             </div>
                         </div>
-
+                        <br>
                 @endforeach
 
                     </div>

@@ -24,7 +24,7 @@
 	}
 	@font-face {
 	    font-family: helveticaneue;
-	    src: url("fonts/helv.otf");
+	    src: url("fonts/helv3.otf");
 	}
 
 	
@@ -1365,10 +1365,11 @@
 
 	body, input, select, textarea {
 		color: #6f7577;
-		font-family: "Helvetica", sans-serif;
+		font-family: "helveticaneue", "Helvetica", sans-serif;
 		font-size: 15pt;
 		font-weight: lighter;
 		line-height: 1.75em;
+		letter-spacing: 0.1em;
 	}
 
 	a {
@@ -1404,7 +1405,7 @@
 		font-family: "helveticaneue";
 		color: #61686b;
 		font-weight: 100;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.5em;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
@@ -1902,8 +1903,8 @@
 	}
 
 	header p {
-		color: #a8b0b3;
-		letter-spacing: 0.05em;
+		color: white !important;
+		letter-spacing: 0.8em !important;
 	}
 
 	header h1 + p {
@@ -2709,6 +2710,10 @@ img {
 		text-align: center;
 	}
 
+	#logotipo{
+		width: 35%;
+	}
+
 		#header:after {
 			content: '';
 			display: inline-block;
@@ -2863,6 +2868,10 @@ img {
 
 		/* Header */
 
+			#logotipo{
+				width: 50%;
+			}
+
 			#header header {
 				padding-bottom: 9em;
 				width: 80%;
@@ -2917,6 +2926,11 @@ img {
 			}
 
 		/* Header */
+
+		#logotipo{
+				width: 90%;
+		}
+
 
 			#header {
 				height: 80vh;
@@ -3204,9 +3218,8 @@ img {
     padding: 10px 20px;
     display: block;
 }
-.ol-grid-filters .default-filters li.active {
-    border: 1px solid #bbb;
-    border-radius: 60px;
+.ol-grid-filters .default-filters li.active > a{
+   color: #8cd1a8 !important;
 }
 .ol-grid-filters .select-filters {
     color: #bbb;

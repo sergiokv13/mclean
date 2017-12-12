@@ -27,9 +27,6 @@
     
     <form method = 'POST' action = '{!!url("project")!!}' enctype="multipart/form-data" id="form-creation">
         <input type = 'hidden' name = '_token' value = '{{ Session::token() }}'>
-        {{ csrf_field() }}
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        
         <div class="input-field col s6 form-group">
             <label for="name">Nombre</label>
             <input id="name" name = "name" type="text" class="validate form-control">

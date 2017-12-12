@@ -37,7 +37,7 @@ http://themeforest.net/user/owwwlab/
   </head>
   <!-- #####End head-->
   <body>
-    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;"> <img src={{url("img/logo.png")}}></h2></a></CENTER>
+    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;"> <img src={{url("img/logo.png")}} id="logotipo"></h2></a></CENTER>
 
       <section id="two" class="main special">
         <div class="container">
@@ -45,7 +45,7 @@ http://themeforest.net/user/owwwlab/
           <div class="content">
             <header class="major">
               <h2>{!!$project->name!!}</h2>
-              
+        
 
               <div class="ol-grid-filters">
               </div>
