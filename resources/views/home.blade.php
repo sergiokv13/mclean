@@ -10,11 +10,6 @@ http://themeforest.net/user/owwwlab/
                                           
 -->
 <html class="is-touch">
-  
- <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay muted loop>
-        <source src="{{ url('img/video.mp4') }}" type="video/mp4">
- </video>
-
 
   <!-- #####Begin head-->
   <head>
@@ -41,8 +36,13 @@ http://themeforest.net/user/owwwlab/
     <script src="{{ asset('js/custom.js') }}"></script>
 
   </head>
+
   <!-- #####End head-->
     <body>
+
+        <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay muted loop>
+        <source src="{{ url('img/video.mp4') }}" type="video/mp4">
+ </video>
 
     @if(Auth::user() != null)
 
