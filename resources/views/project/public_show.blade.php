@@ -13,6 +13,11 @@ http://themeforest.net/user/owwwlab/
 <html class="is-touch">
   <!-- #####Begin head-->
   <head>
+
+    <video playsinline autoplay muted loop poster="img/videoframe.jpg" id="bgvid">
+        <source src='{{url("img/video.mp4")}}' type="video/mp4">
+    </video>
+
     <title>MACLEAN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />

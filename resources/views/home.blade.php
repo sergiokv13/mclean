@@ -10,6 +10,12 @@ http://themeforest.net/user/owwwlab/
                                           
 -->
 <html class="is-touch">
+  
+ <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay muted loop>
+        <source src="{{ url('img/video.mp4') }}" type="video/mp4">
+ </video>
+
+
   <!-- #####Begin head-->
   <head>
     <title>MACLEAN</title>
@@ -45,15 +51,20 @@ http://themeforest.net/user/owwwlab/
       </div> 
 
     @endif
+
+
+
     <!-- Header -->
       <section id="header">
           <header class="major"> 
+
             <div id="conocemas">
               <a href="#one" class="goto-next scrolly">
-                <img src={{url("img/logo.png")}} id="logotipo">
+                <img src='{{url("img/logo.png")}}' id="logotipo">
                 <p style="margin-top: -40px;">{!!$website_information->welcome_text!!}</p>
               </a>
             </div>
+
         </header>
       </section>
 
@@ -195,6 +206,7 @@ http://themeforest.net/user/owwwlab/
             </div>
           </form>
         </div>
+
         <footer>
          
           <ul class="icons">
@@ -218,10 +230,5 @@ http://themeforest.net/user/owwwlab/
       </section>
 
     <!-- Scripts -->
-      
-
-
-
   </body>
-
 </html>

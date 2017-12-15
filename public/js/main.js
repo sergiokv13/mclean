@@ -12,6 +12,7 @@
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)'
 	});
+	
 	$(function() {
 
 		var	$window = $(window),
@@ -28,76 +29,36 @@
 			});
 
 		// Touch mode.
-			if (skel.vars.mobile) {
+			
+			
+			// Hack: iOS vh bug.
+				if (skel.vars.os == 'ios')
+					$body
+						.css('margin-top', -25)
+						.css('padding-bottom', 25);
 
-				var $wrapper;
+			// Pass scroll event to window.
+				$body.on('scroll', function() {
+					$window.trigger('scroll');
+				});
 
-				// Create wrapper.
-					$body.wrapInner('<div id="wrapper" />');
-					$wrapper = $('#wrapper');
+		// Scrolly.
+			$window.on('load.hl_scrolly', function() {
 
-					// Hack: iOS vh bug.
-						if (skel.vars.os == 'ios')
-							$wrapper
-								.css('margin-top', -25)
-								.css('padding-bottom', 25);
+				$('.scrolly').scrolly({
+					speed: 1500,
+					parent: $body,
+					pollOnce: true
+				});
 
-					// Pass scroll event to window.
-						$wrapper.on('scroll', function() {
-							$window.trigger('scroll');
-						});
+				$window.off('load.hl_scrolly');
 
-				// Scrolly.
-					$window.on('load.hl_scrolly', function() {
+			});
 
-						$('.scrolly').scrolly({
-							speed: 1500,
-							parent: $wrapper,
-							pollOnce: true
-						});
+		// Enable touch mode.
+			$html.addClass('is-touch');
 
-						$window.off('load.hl_scrolly');
 
-					});
-
-				// Enable touch mode.
-					$html.addClass('is-touch');
-
-			}
-			else {
-
-				// Scrolly.
-					var $wrapper;
-
-				// Create wrapper.
-					$body.wrapInner('<div id="wrapper" />');
-					$wrapper = $('#wrapper');
-
-					// Hack: iOS vh bug.
-						if (skel.vars.os == 'ios')
-							$wrapper
-								.css('margin-top', -25)
-								.css('padding-bottom', 25);
-
-					// Pass scroll event to window.
-						$wrapper.on('scroll', function() {
-							$window.trigger('scroll');
-						});
-
-				// Scrolly.
-					$window.on('load.hl_scrolly', function() {
-
-						$('.scrolly').scrolly({
-							speed: 1500,
-							parent: $wrapper,
-							pollOnce: true
-						});
-
-						$window.off('load.hl_scrolly');
-
-					});
-
-			}
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
