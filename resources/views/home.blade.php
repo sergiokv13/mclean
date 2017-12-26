@@ -71,7 +71,7 @@ http://themeforest.net/user/owwwlab/
     <!-- One -->
       <section id="one" class="main special">
         <div class="container">
-          <span class="image fit primary"><img src="{{ url('website/'.$website_information->about_image) }}" alt="" /></span>
+          
           <div class="content">
             <header class="major">
               <img src="{{ url('website/'.$website_information->mclean_image) }}"><h2></h2>
@@ -85,7 +85,7 @@ http://themeforest.net/user/owwwlab/
     <!-- Two -->
       <section id="two" class="main special">
         <div class="container">
-          <span class="image fit primary"><img src="{{ url('website/'.$website_information->menu_image) }}" alt="" /></span>
+         
           <div class="content">
             <header class="major">
               <h2>Mapa del sitio</h2>
@@ -115,7 +115,7 @@ http://themeforest.net/user/owwwlab/
     <!-- Three -->
       <section id="three" class="main special">
         <div class="container">
-          <span class="image fit primary"><img src="{{ url('website/'.$website_information->projects_image)}}" alt="" /></span>
+
           <div class="content" style="vertical-align: baseline !important;">
             <header class="major">
               <h2>Proyectos</h2>
@@ -160,7 +160,6 @@ http://themeforest.net/user/owwwlab/
 
       <section id="team" class="main special">
         <div class="container">
-          <span class="image fit primary"><img src="{{ url('website/'.$website_information->team_image) }}" alt="" /></span>
           <div class="content">
             <header class="major">
               <h2>Equipo</h2>

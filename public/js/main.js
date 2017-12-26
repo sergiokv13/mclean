@@ -162,13 +162,7 @@
 
 					}
 
-				// Create bg and append it to body.
-					$bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
-						.css('background-image', (
-							'url("css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
-						))
-						.appendTo($body);
-
+				
 				// Scrollex.
 					options = {
 						mode: 'middle',
