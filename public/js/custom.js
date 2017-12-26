@@ -1018,8 +1018,9 @@
 				          '</div>'
 				},
 				gallery: {
-				enabled: true,
-				tPrev: 'Previous',
+					navigateByImgClick: true,
+					enabled: true,
+					tPrev: 'Previous',
 				   tNext: 'Next',
 				   tCounter: '%curr% / %total%',
 				   arrowMarkup: '<a class="tj-mp-action tj-mp-arrow-%dir% mfp-prevent-close" title="%title%"><i class="fa fa-angle-%dir%"></i></a>',

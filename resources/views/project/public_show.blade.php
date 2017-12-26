@@ -14,10 +14,6 @@ http://themeforest.net/user/owwwlab/
   <!-- #####Begin head-->
   <head>
 
-    <video playsinline autoplay muted loop poster="img/videoframe.jpg" id="bgvid">
-        <source src='{{url("img/video.mp4")}}' type="video/mp4">
-    </video>
-
     <title>MACLEAN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,6 +35,10 @@ http://themeforest.net/user/owwwlab/
 
   <script src="{{ asset('js/custom.js') }}"></script>
   
+  <video playsinline autoplay muted loop poster="img/videoframe.jpg" id="bgvid">
+        <source src='{{url("img/video.mp4")}}' type="video/mp4">
+    </video>
+
   </head>
   <!-- #####End head-->
   <body>
@@ -56,14 +56,11 @@ http://themeforest.net/user/owwwlab/
               </div>
 
 
-             <div class="ol-grid masonry col-3 with-gutter">
+             <div class="ol-grid masonry col-3 with-gutter  ol-lightbox-gallery">
                 @foreach($project->documents as $document) 
                   <!-- #####Begin grid item-->
                   <div class="grid-item cat_{!!$project->category()->id!!}">
                     <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/documents/'.$document->url)}} " alt="image hover">
-                      <div class="ol-overlay ov-dark-alpha-80">
-                         <h1 style="background-color: white; padding-top: 5px;">{{$document->name}}</h1>
-                      </div>
                       <div class="icons"><a style="border-bottom: none;" href="{{ url('projects/documents/'.$document->url)}} " class="ol-lightbox"><i class="fa fa-search"></i></a></div>
                     </div>
                   </div>
@@ -81,13 +78,12 @@ http://themeforest.net/user/owwwlab/
               <div class="ol-grid-filters">
               </div>
 
-            <div class="ol-grid masonry col-3 with-gutter">
+            <div class="ol-grid masonry col-3 with-gutter ol-lightbox-gallery">
             @foreach($projects_in_category as $project_cat) 
               <!-- #####Begin grid item-->
               @if ($project_cat->id != $project->id)
                 <div class="grid-item cat_{!!$project_cat->category()->id!!}">
                   <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project_cat->project_image)}} " alt="image hover">
-                    <div class="ol-overlay ov-dark-alpha-80"></div>
                     <div class="icons"><a style="border-bottom: none;" href="{{ url('projects/'.$project_cat->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a><a style="border-bottom: none;" href="/project_show/{!!$project_cat->id!!}"><i class="fa fa-arrow-right"></i></a></div>
                   </div>
                 </div>

@@ -140,13 +140,16 @@ http://themeforest.net/user/owwwlab/
             </div>
 
 
-             <div class="ol-grid masonry col-3 with-gutter">
+             <div class="ol-grid masonry col-3 with-gutter ol-lightbox-gallery">
                 @foreach($projects as $project) 
                   <!-- #####Begin grid item-->
                   <div class="grid-item cat_{!!$project->category()->id!!}">
                     <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project->project_image)}} " alt="image hover">
-                      <div class="ol-overlay ov-dark-alpha-80"></div>
-                      <div class="icons"><a style="border-bottom: none;" href="{{ url('projects/'.$project->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a><a style="border-bottom: none;" href="/project_show/{!!$project->id!!}"><i class="fa fa-arrow-right"></i></a></div>
+                      <div class="icons">
+                          <a style="border-bottom: none;" href="{{ url('projects/'.$project->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a>
+
+                          <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}"><i class="fa fa-arrow-right"></i></a>
+                      </div>
                     </div>
                   </div>
                   <!-- #####End grid item-->
