@@ -61,7 +61,8 @@ http://themeforest.net/user/owwwlab/
                   <!-- #####Begin grid item-->
                   <div class="grid-item cat_{!!$project->category()->id!!}">
                     <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/documents/'.$document->url)}} " alt="image hover">
-                      <div class="icons"><a style="border-bottom: none;" href="{{ url('projects/documents/'.$document->url)}} " class="ol-lightbox"><i class="fa fa-search"></i></a></div>
+                      <div class="icons">
+                        <a title="{{$document->name}}" style="border-bottom: none;" href="{{ url('projects/documents/'.$document->url)}} " class="ol-lightbox"><i class="fa fa-search"></i></a></div>
                     </div>
                   </div>
                   <!-- #####End grid item-->
@@ -84,7 +85,11 @@ http://themeforest.net/user/owwwlab/
               @if ($project_cat->id != $project->id)
                 <div class="grid-item cat_{!!$project_cat->category()->id!!}">
                   <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project_cat->project_image)}} " alt="image hover">
-                    <div class="icons"><a style="border-bottom: none;" href="{{ url('projects/'.$project_cat->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a><a style="border-bottom: none;" href="/project_show/{!!$project_cat->id!!}"><i class="fa fa-arrow-right"></i></a></div>
+                    <div class="icons">
+
+                      <a title="{{$project->name}} <br> <a href='/project_show/{!!$project->id!!}'>Ver proyecto</a>" style="border-bottom: none;" href="{{ url('projects/'.$project_cat->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a>
+
+                      <a style="border-bottom: none;" href="/project_show/{!!$project_cat->id!!}"><i class="fa fa-arrow-right"></i></a></div>
                   </div>
                 </div>
               @endif
