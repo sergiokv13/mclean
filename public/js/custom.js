@@ -1023,7 +1023,7 @@
 					tPrev: 'Previous',
 				   tNext: 'Next',
 				   tCounter: '%curr% / %total%',
-				   arrowMarkup: '<a class="tj-mp-action tj-mp-arrow-%dir% mfp-prevent-close" title="%title%"><i class="fa fa-angle-%dir%"></i></a>',
+				   arrowMarkup: '<a style="border-bottom: none !important;" class="tj-mp-action tj-mp-arrow-%dir% mfp-prevent-close" title="%title%"><i class="fa fa-angle-%dir%"></i></a>',
 				},
 				callbacks:{
 					elementParse:function(item){
