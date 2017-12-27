@@ -239,14 +239,14 @@ http://themeforest.net/user/owwwlab/
   if(pos >= first) {
       $("section").css({
                   "background-color" : "white",
-                  "transition": "background 0.5s linear"             
+                              
       });
   }
 
   if(pos < first) {
       $("section").css({
                   "background-color" : "",
-                  "transition": "background 0.5s linear"             
+                               
       });
   }
   
