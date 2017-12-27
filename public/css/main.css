@@ -2809,6 +2809,7 @@ img {
 		}
 
 		#footer footer {
+			font-weight: 600 !important;
 			bottom: 1em;
 			color: #6f7577;
 			left: 0;

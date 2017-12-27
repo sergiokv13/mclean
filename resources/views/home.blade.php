@@ -40,7 +40,7 @@ http://themeforest.net/user/owwwlab/
   <!-- #####End head-->
     <body>
 
-        <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay muted loop>
+  <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay muted loop>
         <source src="{{ url('img/video.mp4') }}" type="video/mp4">
  </video>
 
@@ -195,7 +195,8 @@ http://themeforest.net/user/owwwlab/
             <h2>Contacto</h2>
            
           </header>
-          <form method="post" action="#">
+          <form method="post" action="/contact_mail">
+            {!! csrf_field() !!}
             <div class="row uniform">
               <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nombre" /></div>
               <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Correo electrónico" /></div>
@@ -236,17 +237,17 @@ http://themeforest.net/user/owwwlab/
   var last = $("#footer").offset().top;  
   var pos = $(window).scrollTop();
 
-  if(pos >= first) {
+  if(pos >= first/2) {
       $("section").css({
                   "background-color" : "white",
-                              
+                  "transition": "background 0.5s linear"             
       });
   }
 
-  if(pos < first) {
+  if(pos < first/2) {
       $("section").css({
                   "background-color" : "",
-                               
+                  "transition": "background 0.5s linear"             
       });
   }
   

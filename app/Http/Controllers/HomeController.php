@@ -37,4 +37,9 @@ class HomeController extends Controller
     {
         return view('no_authorization');
     }
+
+     public function contact_mail()
+    {
+        return view('no_authorization');
+    }
 }
