@@ -2797,7 +2797,7 @@ img {
 
 	#footer {
 		min-height: 100vh;
-		padding: 0 0 3em 0;
+		padding: 0 0 10em 0;
 		position: relative;
 		text-align: center;
 	}
@@ -2810,7 +2810,7 @@ img {
 
 		#footer footer {
 			font-weight: 600 !important;
-			bottom: 1em;
+			
 			color: #6f7577;
 			left: 0;
 			position: absolute;
