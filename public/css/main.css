@@ -2810,7 +2810,7 @@ img {
 
 		#footer footer {
 			bottom: 1em;
-			color: rgba(255, 255, 255, 0.5);
+			color: #6f7577;
 			left: 0;
 			position: absolute;
 			text-align: center;
@@ -2826,7 +2826,7 @@ img {
 			}
 
 				#footer footer a:hover {
-					color: #ffffff !important;
+					color: black !important;
 				}
 
 			#footer footer .copyright {

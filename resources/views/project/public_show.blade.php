@@ -35,14 +35,11 @@ http://themeforest.net/user/owwwlab/
 
   <script src="{{ asset('js/custom.js') }}"></script>
   
-  <video playsinline autoplay muted loop poster="img/videoframe.jpg" id="bgvid">
-        <source src='{{url("img/video.mp4")}}' type="video/mp4">
-    </video>
 
   </head>
   <!-- #####End head-->
   <body>
-    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;"> <img src={{url("img/logo.png")}} id="logotipo"></h2></a></CENTER>
+    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;"> <img src={{url("img/logo2.png")}} id="logotipo"></h2></a></CENTER>
 
       <section id="two" class="main special">
         <div class="container">

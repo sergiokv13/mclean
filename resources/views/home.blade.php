@@ -210,13 +210,6 @@ http://themeforest.net/user/owwwlab/
         </div>
 
         <footer>
-         
-          <ul class="icons">
-            <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-          </ul>
 
            <div class="copyright" style="margin-bottom: 30px;">
            <span><i class= "fa fa-envelope-o" ></i> {{$website_information->contact_email}} </span><br><br>
@@ -226,7 +219,7 @@ http://themeforest.net/user/owwwlab/
           </div>
 
           <ul class="copyright">
-            <li>&copy; Maclean 2017</li><li>Development and Design: <a href="www.expansesoft.com">Expanse Software</a></li><li>Images and videos: <a href="https://www.facebook.com/picture.contenidos/?timeline_context_item_type=intro_card_work&timeline_context_item_source=550169723&pnref=lhc">Picture</a></li>
+            <li>&copy; Maclean 2017</li><li>Development and Design: <a href="www.expansesoft.com">Expanse Software</a></li>
           </ul>
         </footer>
       </section>
@@ -243,14 +236,14 @@ http://themeforest.net/user/owwwlab/
   var last = $("#footer").offset().top;  
   var pos = $(window).scrollTop();
 
-  if(pos >= first && pos < last) {
+  if(pos >= first) {
       $("section").css({
-                  "background-color" : "#dbdbdb",
+                  "background-color" : "white",
                   "transition": "background 0.5s linear"             
       });
   }
 
-  if(pos < first || pos >= last-1) {
+  if(pos < first) {
       $("section").css({
                   "background-color" : "",
                   "transition": "background 0.5s linear"             
