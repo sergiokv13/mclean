@@ -146,7 +146,7 @@ http://themeforest.net/user/owwwlab/
                   <div class="grid-item cat_{!!$project->category()->id!!}">
                     <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project->project_image)}} " alt="image hover">
                       <div class="icons">
-                          <a title="{{$project->name}} <br> <a href='/project_show/{!!$project->id!!}'>Ver proyecto</a>" style="border-bottom: none;" href="{{ url('projects/'.$project->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a>
+                          <a title="<span style='color:white !important;'>{{$project->name}}</span> <br> <a href='/project_show/{!!$project->id!!}'>Ver proyecto</a>" style="border-bottom: none;" href="{{ url('projects/'.$project->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a>
 
                           <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}"><i class="fa fa-arrow-right"></i></a>
                       </div>
@@ -234,3 +234,30 @@ http://themeforest.net/user/owwwlab/
     <!-- Scripts -->
   </body>
 </html>
+
+
+<script type="text/javascript">
+  $(window).scroll(function(){ 
+
+  var first = $("#one").offset().top;
+  var last = $("#footer").offset().top;  
+  var pos = $(window).scrollTop();
+
+  if(pos >= first && pos < last) {
+      $("section").css({
+                  "background-color" : "#dbdbdb",
+                  "transition": "background 0.5s linear"             
+      });
+  }
+
+  if(pos < first || pos >= last-1) {
+      $("section").css({
+                  "background-color" : "",
+                  "transition": "background 0.5s linear"             
+      });
+  }
+  
+
+  
+  });
+</script>
