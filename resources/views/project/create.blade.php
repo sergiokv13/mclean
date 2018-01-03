@@ -5,7 +5,7 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>Create new project</h3>
+    <h3>Crear un nuevo proyecto</h3>
 </div>
     <div class="box-body">
 
