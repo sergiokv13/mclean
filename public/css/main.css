@@ -233,6 +233,11 @@
 			width: 100%;
 		}
 
+		video{
+			 height: 100vh; min-height: 100%;
+
+		}
+
 	}
 
 /* Grid */
@@ -3269,6 +3274,7 @@ img {
 }
 .ol-grid-filters .select-filters select:focus {
     outline: none;
+    border-radius: 20px !important;
 }
 .ol-grid-filters .select-filters .select-value {
     position: absolute;
@@ -3280,17 +3286,7 @@ img {
     text-align: center;
     line-height: 40px;
 }
-.ol-grid-filters .select-filters:after {
-    position: absolute;
-    content: "\e9ca";
-    height: 40px;
-    top: 0;
-    right: 20px;
-    font-family: "ol-icon-set";
-    font-size: 18px;
-    line-height: 40px;
-    text-align: center;
-}
+
 .dark-wrapper .ol-grid-filters .grid-filter a {
     color: #cbcbcb;
 }

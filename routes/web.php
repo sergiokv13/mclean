@@ -18,7 +18,7 @@ Route::get('/home', 'main@index')->name('home');
 
 Route::get('/no_authorization', 'HomeController@no_authorization')->name('no_authorization');
 
-Route::post('/contact_mail', 'HomeController@contact_mail')->name('contact_mail');
+Route::post('/contact_mail', 'main@contact_mail')->name('contact_mail');
 
 Route::group(['middleware'=> 'web'],function(){
 });

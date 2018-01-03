@@ -40,9 +40,9 @@ http://themeforest.net/user/owwwlab/
   <!-- #####End head-->
     <body>
 
-  <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay muted loop>
+  <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay loop>
         <source src="{{ url('img/video.mp4') }}" type="video/mp4">
- </video>
+  </video>
 
     @if(Auth::user() != null)
 
@@ -130,11 +130,10 @@ http://themeforest.net/user/owwwlab/
               </ul>
               <div class="select-filters">
                 <select>
-                  <option value="*">Show All</option>
+                  <option value="*">Todos</option>
                    @foreach($categories as $category) 
                     <option value=".cat_{!!$category->id!!}">{!!$category->name!!}</option>
                   @endforeach 
-                  
                 </select>
               </div>
             </div>
@@ -198,9 +197,9 @@ http://themeforest.net/user/owwwlab/
           <form method="post" action="/contact_mail">
             {!! csrf_field() !!}
             <div class="row uniform">
-              <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nombre" /></div>
-              <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Correo electrónico" /></div>
-              <div class="12u$"><textarea name="message" id="message" placeholder="Mensaje" rows="4"></textarea></div>
+              <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nombre" required/></div>
+              <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Correo electrónico" required/></div>
+              <div class="12u$"><textarea name="message" id="message" placeholder="Mensaje" rows="4" required></textarea></div>
               <div class="12u$">
                 <ul class="actions">
                   <li><input type="submit" value="Send Message" class="special" /></li>

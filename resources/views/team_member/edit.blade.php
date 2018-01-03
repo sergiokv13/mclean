@@ -34,23 +34,6 @@
             name!!}"> 
         </div>
 
-        <div class="form-group ">
-            <label for="position">Cargo</label>
-            <input id="position" name = "position" type="text" class="form-control" value="{!!$team_member->
-            position!!}"> 
-        </div>
-
-        <div class="form-group ">
-            <label for="welcome_title">Texto de bienvenida</label>
-            <input id="welcome_title" name = "welcome_title" type="text" class="form-control" value="{!!$team_member->
-            welcome_title!!}"> 
-        </div>
-        
-        <div class="form-group ">
-            <label for="about_team_member">Texto de presentación</label>
-            <input id="about_team_member" name = "about_team_member" type="text" class="form-control" value="{!!$team_member->
-            about_team_member!!}"> 
-        </div>
          <div class="form-group">
                 <img id="member_preview" src="{{ url('members/'.$team_member->member_image)}}" alt="The image preview will be displayed here." height="100px;"/>
                 <input id="member_image" name = "member_image" type="file" class="form-control"><br>

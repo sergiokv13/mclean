@@ -63,9 +63,6 @@ class Team_memberController extends Controller
 
         $rules = array(
             'name' => 'required',
-            'position' => 'required',
-            'welcome_title' => 'required',
-            'about_team_member' => 'required',
             'member_image' => 'required',
         );
 
@@ -77,7 +74,7 @@ class Team_memberController extends Controller
         $team_member->name = $request->name;
 
         
-        $team_member->about_team_member = $request->about_team_member;
+        $team_member->about_team_member = "";
 
         
         $team_member->facebook_link = "";
@@ -91,9 +88,9 @@ class Team_memberController extends Controller
         
         $team_member->linkedin_link = "";
 
-        $team_member->welcome_title = $request->welcome_title;
+        $team_member->welcome_title = "";
 
-        $team_member->position = $request->position;
+        $team_member->position = "";
 
         if ($request->member_image != null)
         {
@@ -178,9 +175,6 @@ class Team_memberController extends Controller
 
         $rules = array(
             'name' => 'required',
-            'position' => 'required',
-            'welcome_title' => 'required',
-            'about_team_member' => 'required',
         );
 
         $this->validate($request, $rules, $messsages);
@@ -190,23 +184,23 @@ class Team_memberController extends Controller
         $team_member->name = $request->name;
 
         
-        $team_member->about_team_member = $request->about_team_member;
+        $team_member->about_team_member = "";
 
         
-        $team_member->facebook_link = $request->facebook_link;
+        $team_member->facebook_link = "";
 
         
-        $team_member->googleplus_link = $request->googleplus_link;
+        $team_member->googleplus_link = "";
 
         
-        $team_member->twitter_link = $request->twitter_link;
+        $team_member->twitter_link = "";
 
         
-        $team_member->linkedin_link = $request->linkedin_link;
+        $team_member->linkedin_link = "";
 
-        $team_member->welcome_title = $request->welcome_title;
+        $team_member->welcome_title = "";
 
-        $team_member->position = $request->position;
+        $team_member->position = "";
 
         if ($request->member_image != null)
         {

@@ -6,7 +6,7 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>Miembros del equipo</h3>
+    <h3>Imagenes del equipo</h3>
 </div>
     <div class="box-body">
 
@@ -34,7 +34,6 @@
                         <a href = '/team_member/{!!$team_member->id!!}/edit'  class = 'btn btn-primary btn-sm'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                         <input type="hidden" id="token" name="_token" value="{{ csrf_token() }}">
                             <a onclick="delete_record({{$team_member->id}});" href = "#" class = "btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                        <a href = '/team_member/{!!$team_member->id!!}'  class = 'btn btn-success btn-sm'><i class="fa fa-eye" aria-hidden="true"></i></a>
                     </div>
                 </td>
             </tr>

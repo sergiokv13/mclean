@@ -50,20 +50,7 @@
                 <input id="mclean_image" name = "mclean_image" type="file" ><br>
         </div>
 
-         <div class="form-group">
-            <label for="address">Image de fondo para la sección</label><br>
-                <img id="about_preview" src="{{ url('website/'.$website_information->about_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="about_image" name = "about_image" type="file" ><br>
-        </div>
 
-        <h2>Sección mapa del sitio </h2>
-        <info>En esta sección se presenta el menú de navegación.</info><br><br>
-
-         <div class="form-group">
-            <label for="address">Imagen de fondo para menú</label><br>
-                <img id="menu_preview" src="{{ url('website/'.$website_information->menu_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="menu_image" name = "menu_image" type="file" ><br>
-        </div>
 
         <h2>Sección de proyectos </h2>
         <info>En esta sección se presentan los proyectos.</info><br><br>
@@ -74,11 +61,6 @@
             projects_text!!} </textarea>
         </div>
 
-        <div class="form-group">
-            <label for="address">Imagen de fondo para proyectos</label><br>
-                <img id="projects_preview" src="{{ url('website/'.$website_information->projects_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="projects_image" name = "projects_image" type="file" ><br>
-        </div>
 
         <h2>Sección de equipo </h2>
         <info>En esta sección se presentan los integrantes del equipo.</info><br><br>
@@ -89,12 +71,6 @@
             team_text!!} </textarea>
         </div>
 
-        <div class="form-group">
-            {{ url('website/'.$website_information->team_image)}}
-            <label for="address">Imagen de fondo para equipo</label><br>
-                <img id="team_preview" src="{{ url('website/'.$website_information->team_image)}}" alt="The image preview will be displayed here." height="100px;"/>
-                <input id="team_image" name = "team_image" type="file" ><br>
-        </div>
 
         <h2>Sección de contacto </h2>
         <info>En esta sección se presenta el formulario de contacto, junto con la información pertinente.</info><br><br>

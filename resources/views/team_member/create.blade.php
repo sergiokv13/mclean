@@ -30,22 +30,6 @@
         </div>
         
         <div class="form-group">
-             <label for="position">Cargo</label>
-            <input id="position" name = "position" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="welcome_title">Texto de bienvenida</label>
-            <input id="welcome_title" name = "welcome_title" type="text" class="form-control">
-        </div>
-
-
-        <div class="form-group">
-             <label for="about_team_member">Texto de presentación</label>
-            <input id="about_team_member" name = "about_team_member" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
                 <label>Imagen</label>
                 <img id="member_preview" src="#" alt="La imagen se mostrara acá." height="100px;"/>
                 <input id="member_image" name = "member_image" type="file" class="form-control"><br>
