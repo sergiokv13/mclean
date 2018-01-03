@@ -37,7 +37,7 @@ class main extends Controller
 
             $message->from("contactos@maclean.com", "Contactos Maclean");
 
-            $message->to('macleanarquitectura@gmail.com');
+            $message->to('raulmaclean@yahoo.com');
 
         });
         

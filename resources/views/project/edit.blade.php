@@ -5,7 +5,7 @@
 <section class="content">
 <div class="box box-primary">
 <div class="box-header">
-    <h3>Edit project</h3>
+    <h3>Editar proyecto</h3>
 </div>
     <div class="box-body">
 
@@ -29,13 +29,13 @@
         id!!}/update' enctype="multipart/form-data"> 
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
         <div class="input-field col s6 form-group">
-            <label for="name">Name</label>
+            <label for="name">Nombre</label>
             <input id="name" name = "name" type="text" class="validate form-control" value="{!!$project->
             name!!}"> 
         </div>
 
          <div class="input-field col s6 form-group">
-            <label for="name">Category</label>
+            <label for="name">Categoría</label>
             <select name="category" id="category" class="form-control">
                 @foreach($categories as $category) 
                     @if ($project->category_id == $category->id)
@@ -49,7 +49,7 @@
 
 
         <div class="input-field col s6 form-group">
-            <label for="description">Description</label>
+            <label for="description">Descripción</label>
             <textarea id="description" name = "description" class="validate form-control"> 
                 {{ $project->description }}
             </textarea>
