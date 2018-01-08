@@ -30,11 +30,7 @@ http://themeforest.net/user/owwwlab/
       <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
 
-      <script src="{{ asset('js/vendors/vendors.js') }} "></script>
-      <link rel="stylesheet" href="css/sweetalert.css">
-      <script src="js/sweetalert.min.js"></script>
-      @include('sweet::alert')
-      
+      <script src="{{ asset('js/vendors/vendors.js') }} "></script>      
     <!-- Only for local and can be removed on server-->
 
     <script src="{{ asset('js/custom.js') }}"></script>
@@ -46,6 +42,16 @@ http://themeforest.net/user/owwwlab/
       <a  href="#team" class="scrolly" style="color:#6f7577; border-bottom: none;"> EQUIPO</a><br>
       <a  href="#footer" class="scrolly" style="color:#6f7577; border-bottom: none;"> CONTACTO</a><br>
     </div>
+
+
+ 
+
+    @if(Session::has('message'))
+      <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        {{ Session::get('message') }}
+      </div> 
+    @endif
 
   </head>
 

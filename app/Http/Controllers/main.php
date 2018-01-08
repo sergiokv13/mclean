@@ -41,7 +41,7 @@ class main extends Controller
 
         });
         
-        Alert::message('Robots are working!');
+        Session::flash('message', 'Su mensaje fue enviado.'); 
 
        return redirect('/');
     }
