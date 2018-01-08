@@ -52,7 +52,13 @@
 	   opacity: .5;
 	}
 
-
+	#side_menu
+	{
+		margin-left: 10px;
+		top: 30%;
+		position: fixed !important;
+		z-index: 100;
+	}
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -185,6 +191,11 @@
 
 	@media screen and (max-width: 736px) {
 
+		#side_menu
+		{
+			display: none !important;
+		}
+
 		.container.\31 25\25 {
 			width: 100%;
 			max-width: 100%;
@@ -210,6 +221,12 @@
 	}
 
 	@media screen and (max-width: 480px) {
+
+		#side_menu
+		{
+			display: none !important;
+		}
+
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -1407,6 +1424,12 @@
 	}
 
 		a:hover {
+			border-bottom-color: transparent !important;
+			color: #8cd1a8 !important;
+			text-decoration: none;
+		}
+
+		a:active {
 			border-bottom-color: transparent !important;
 			color: #8cd1a8 !important;
 			text-decoration: none;
@@ -2735,8 +2758,9 @@ img {
 	}
 
 	#logotipo{
-		width: 23%;
+		width: 22%;
 	}
+
 
 		#header:after {
 			content: '';
@@ -2778,7 +2802,7 @@ img {
 				color: white;
 				font-weight: 100;
 				letter-spacing: 0.3em;
-				margin: 1.5em 0 0 0;
+				margin: -2em 0 0 1.2em;
 			}
 
 		#header .container {
@@ -2894,7 +2918,7 @@ img {
 		/* Header */
 
 			#logotipo{
-				width: 50%;
+				width: 40%;
 			}
 
 			#header header {
@@ -2953,7 +2977,7 @@ img {
 		/* Header */
 
 		#logotipo{
-				width: 90%;
+				width: 70%;
 		}
 
 
@@ -2974,7 +2998,7 @@ img {
 					}
 
 					#header header p {
-						margin-top: 1em;
+						margin-top: -1em;
 					}
 
 				#header .container {

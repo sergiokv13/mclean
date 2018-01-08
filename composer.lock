@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5626320efec24d0544229e169c9be15c",
+    "content-hash": "3f36baebd453225375c0878fc19ba831",
     "packages": [
         {
             "name": "amranidev/ajaxis",
@@ -145,6 +145,46 @@
                 "smart generator"
             ],
             "time": "2017-06-30T02:12:18+00:00"
+        },
+        {
+            "name": "andheiberg/notify",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AndreasHeiberg/laravel-notify.git",
+                "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AndreasHeiberg/laravel-notify/zipball/c25c8f8b2e98ee39068feffd388626f08059be1c",
+                "reference": "c25c8f8b2e98ee39068feffd388626f08059be1c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": ">=4.0.0, <6.0.0",
+                "illuminate/session": ">=4.0.0, <6.0.0",
+                "illuminate/support": ">=4.0.0, <6.0.0",
+                "illuminate/translation": ">=4.0.0, <6.0.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "2.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Andheiberg\\Notify": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Andreas Peter Heiberg",
+                    "email": "heibergandreas@gmail.com"
+                }
+            ],
+            "description": "A site notification package for laravel.",
+            "time": "2015-08-27T10:03:18+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2237,16 +2277,77 @@
             "time": "2017-02-03T17:31:13+00:00"
         },
         {
+            "name": "uxweb/sweet-alert",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uxweb/sweet-alert.git",
+                "reference": "92519b916755d673f92343767edd06110b167d05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/92519b916755d673f92343767edd06110b167d05",
+                "reference": "92519b916755d673f92343767edd06110b167d05",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "UxWeb\\SweetAlert\\SweetAlertServiceProvider"
+                    ],
+                    "aliases": {
+                        "Alert": "UxWeb\\SweetAlert\\SweetAlert"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "UxWeb\\SweetAlert\\": "src/SweetAlert/"
+                },
+                "files": [
+                    "src/SweetAlert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Uziel Bueno",
+                    "email": "ux.webs@gmail.com"
+                }
+            ],
+            "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
+            "keywords": [
+                "alert",
+                "laravel",
+                "notifier",
+                "sweet"
+            ],
+            "time": "2017-09-10T17:14:08+00:00"
+        },
+        {
             "name": "vinkla/pusher",
             "version": "2.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vinkla/laravel-pusher.git",
+                "url": "https://github.com/pusher/pusher-http-laravel.git",
                 "reference": "6c431cad0a0b44599aeddf77bceda8035de0607b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/laravel-pusher/zipball/6c431cad0a0b44599aeddf77bceda8035de0607b",
+                "url": "https://api.github.com/repos/pusher/pusher-http-laravel/zipball/6c431cad0a0b44599aeddf77bceda8035de0607b",
                 "reference": "6c431cad0a0b44599aeddf77bceda8035de0607b",
                 "shasum": ""
             },
@@ -2297,6 +2398,7 @@
                 "rest",
                 "trigger"
             ],
+            "abandoned": "pusher/pusher-http-laravel",
             "time": "2017-01-01T13:46:34+00:00"
         },
         {

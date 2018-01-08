@@ -30,15 +30,29 @@ http://themeforest.net/user/owwwlab/
       <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
 
-         <script src="{{ asset('js/vendors/vendors.js') }} "></script>
+      <script src="{{ asset('js/vendors/vendors.js') }} "></script>
+      <link rel="stylesheet" href="css/sweetalert.css">
+      <script src="js/sweetalert.min.js"></script>
+      @include('sweet::alert')
+      
     <!-- Only for local and can be removed on server-->
 
     <script src="{{ asset('js/custom.js') }}"></script>
+
+    <div id = "side_menu">
+      <a  href="#header" class="scrolly active" style="color:#6f7577; border-bottom: none;"> INICIO</a><br>
+      <a  href="#one" class="scrolly" style="color:#6f7577; border-bottom: none;"> ACERCA DE</a><br>
+      <a  href="#two" class="scrolly" style="color:#6f7577; border-bottom: none;"> PROYECTOS</a><br>
+      <a  href="#team" class="scrolly" style="color:#6f7577; border-bottom: none;"> EQUIPO</a><br>
+      <a  href="#footer" class="scrolly" style="color:#6f7577; border-bottom: none;"> CONTACTO</a><br>
+    </div>
 
   </head>
 
   <!-- #####End head-->
     <body>
+
+
 
   <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay loop>
         <source src="{{ url('img/video.mp4') }}" type="video/mp4">
@@ -60,13 +74,14 @@ http://themeforest.net/user/owwwlab/
 
             <div id="conocemas">
               <a href="#one" class="goto-next scrolly">
-                <img src='{{url("img/logo.png")}}' id="logotipo">
-                <p style="margin-top: -40px;">{!!$website_information->welcome_text!!}</p>
+                <img style="margin-left: auto; margin-right: auto;" src='{{url("img/logo.png")}}' id="logotipo">
+                <p>{!!$website_information->welcome_text!!}</p>
               </a>
             </div>
 
         </header>
       </section>
+
 
     <!-- One -->
       <section id="one" class="main special">
@@ -82,38 +97,9 @@ http://themeforest.net/user/owwwlab/
         </div>
       </section>
 
-    <!-- Two -->
-      <section id="two" class="main special">
-        <div class="container">
-         
-          <div class="content">
-            <header class="major">
-              <h2>Mapa del sitio</h2>
-            </header>
-            <ul class="icons-grid">
-              <li>
-                <a  href="#header" class="scrolly" style="color:#6f7577; border-bottom: none; "> INICIO</a>
-                
-              </li>
-              <li>
-                <a  href="#three" class="scrolly" style="color:#6f7577; border-bottom: none; "> PROYECTOS</a>
-                
-              </li>
-              <li>
-                <a  href="#team" class="scrolly" style="color:#6f7577; border-bottom: none; "> EQUIPO</a>
-                
-              </li>
-              <li>
-                <a  href="#footer" class="scrolly" style="color:#6f7577; border-bottom: none; "> CONTACTO</a>
-              </li>
-            </ul>
-          </div>
-          <a href="#three" class="goto-next scrolly">Next</a>
-        </div>
-      </section>
 
     <!-- Three -->
-      <section id="three" class="main special">
+      <section id="two" class="main special">
         <div class="container">
 
           <div class="content" style="vertical-align: baseline !important;">
@@ -139,18 +125,17 @@ http://themeforest.net/user/owwwlab/
             </div>
 
 
+            </a>
+
              <div class="ol-grid masonry col-3 with-gutter ol-lightbox-gallery">
                 @foreach($projects as $project) 
                   <!-- #####Begin grid item-->
-                  <div class="grid-item cat_{!!$project->category()->id!!}">
-                    <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project->project_image)}} " alt="image hover">
-                      <div class="icons">
-                          <a title="<span style='color:white !important;'>{{$project->name}}</span> <br> <a href='/project_show/{!!$project->id!!}'>Ver proyecto</a>" style="border-bottom: none;" href="{{ url('projects/'.$project->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a>
-
-                          <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}"><i class="fa fa-arrow-right"></i></a>
+                  <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}">
+                    <div class="grid-item cat_{!!$project->category()->id!!}">
+                      <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project->project_image)}} " alt="image hover">
                       </div>
                     </div>
-                  </div>
+                  </a>
                   <!-- #####End grid item-->
                  @endforeach 
               </div>
@@ -241,6 +226,7 @@ http://themeforest.net/user/owwwlab/
                   "background-color" : "white",
                   "transition": "background 0.5s linear"             
       });
+     $("#side_menu").fadeIn(500);
   }
 
   if(pos < first/2) {
@@ -248,6 +234,7 @@ http://themeforest.net/user/owwwlab/
                   "background-color" : "",
                   "transition": "background 0.5s linear"             
       });
+      $("#side_menu").fadeOut(500);
   }
   
 

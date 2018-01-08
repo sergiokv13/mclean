@@ -9,6 +9,7 @@ use App\Team_member;
 use App\Mail\mailme;
 
 use Mail;
+use Alert;
 
 class main extends Controller
 {
@@ -18,7 +19,6 @@ class main extends Controller
         $projects = Project::all();
         $categories = Category::all();
         $team_members = Team_member::all();
-
         return view('home',compact('website_information','categories','projects','team_members'));
     }
 
@@ -41,6 +41,7 @@ class main extends Controller
 
         });
         
+        Alert::message('Robots are working!');
 
        return redirect('/');
     }

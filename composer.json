@@ -7,9 +7,11 @@
     "require": {
         "php": ">=5.6.4",
         "amranidev/scaffold-interface": "^1.7",
+        "andheiberg/notify": "2.*",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "unisharp/laravel-ckeditor": "^4.6"
+        "unisharp/laravel-ckeditor": "^4.6",
+        "uxweb/sweet-alert": "^1.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
