@@ -78,6 +78,7 @@
 
 .item{
 	vertical-align: top;
+	text-align: left;
     height:150px;
     display: inline-block;
     position:relative;
