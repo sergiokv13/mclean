@@ -128,7 +128,7 @@ http://themeforest.net/user/owwwlab/
                     </div>
 
                     <div class="list-container">
-                        <div class='list'>
+                        <div class='list' style="min-width: 5000px;">
                             <div id="item{{$category->id}}" class='item' style = "text-align: left; width: 200px;">
                               {!!$category->name!!}
                             </div>
