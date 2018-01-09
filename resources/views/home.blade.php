@@ -194,7 +194,7 @@ http://themeforest.net/user/owwwlab/
             <div class="row uniform">
               <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Nombre" required/></div>
               <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Correo electrónico" required/></div>
-              <div class="12u$"><textarea name="message" id="message" placeholder="Mensaje" rows="4" required></textarea></div>
+              <div class="12u$"><textarea name="message" id="message" placeholder="Mensaje" rows="4" required style="resize: none;"></textarea></div>
               <div class="12u$">
                 <ul class="actions">
                   <li><input type="submit" value="Send Message" class="special" /></li>
