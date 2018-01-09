@@ -128,7 +128,7 @@ http://themeforest.net/user/owwwlab/
                     </div>
 
                     <div class="list-container">
-                        <div class='list' style="min-width: 5000px;">
+                        <div class='list' style="min-width: 300%; width: 100%;  ">
                             <div id="item{{$category->id}}" class='item' style = "text-align: left; width: 200px;">
                               {!!$category->name!!}
                             </div>
@@ -260,7 +260,7 @@ $(document).ready(function() {
     var $item{{$category->id}} = $('div#item{{$category->id}}'), //Cache your DOM selector
         visible{{$category->id}} = 1, //Set the number of items that will be visible
         index{{$category->id}} = 0, //Starting index
-        endIndex{{$category->id}} = ( $item{{$category->id}}.length / visible{{$category->id}} ) - 1; //End index
+        endIndex{{$category->id}} = ( $item{{$category->id}}.length / visible{{$category->id}} ); //End index
     
     $('div#arrowR{{$category->id}}').click(function(){
         if(index{{$category->id}} < endIndex{{$category->id}} ){
