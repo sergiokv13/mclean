@@ -9,6 +9,107 @@
 
 
 
+.container2{
+	width:100%;
+    height:150px;
+    white-space: nowrap; 
+}
+
+.list-container {
+	overflow:hidden;    
+	width: 100%;  
+	float:left; 
+	white-space: nowrap; 
+}
+
+.list{
+	min-width:1400px;
+	width: 100%;
+    float:left;
+    white-space: nowrap; 
+}
+
+
+.arrowR{
+	display: none;
+	background:grey;
+	color: white;
+    width:5%;
+    margin-left: -5%;
+    height:150px;
+    float:right;
+    cursor:pointer;
+    line-height: 150px;
+  	text-align: center;
+  	opacity: 0.7;
+    filter: alpha(opacity=70);
+    z-index: 1000 !important;
+    position: relative;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+
+.arrowL{
+	display: none;
+	background:grey;
+	color: white;
+    width:5%;
+    margin-right: -5%;
+    height:150px;
+    float:left;
+    cursor:pointer;
+    line-height: 150px;
+  	text-align: center;
+  	opacity: 0.7;
+    filter: alpha(opacity=70);
+    z-index: 1000 !important;
+    position: relative;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+.item{
+    height:150px;
+    float:left;
+    position:relative;
+    z-index: 600 !important;
+    margin-right: 2px;
+}
+
+
+
+	.imagen_proyecto{
+		opacity: 1;
+	   transition: opacity .25s ease-in-out;
+	   -moz-transition: opacity .25s ease-in-out;
+	   -webkit-transition: opacity .25s ease-in-out;
+	}
+	.imagen_proyecto:hover{
+		opacity: 0.5;
+	}
+
+	#categoria
+	{
+		overflow-y : hidden;
+		overflow-x: auto;
+    	white-space: nowrap;
+		width:100%;
+		height:150px;
+	}
+
+	#categoria span {
+    	display: inline-block;
+	}
+
 	 /* The alert message box */
 	.alert {
 	    padding: 20px;
@@ -221,6 +322,20 @@
 		#side_menu
 		{
 			display: none !important;
+		}
+
+		.arrowL
+		{
+			display: none !important;
+		}
+
+		.arrowR
+		{
+			display: none !important;
+		}
+
+		.list-container{
+			overflow-x: visible;
 		}
 
 		.container.\31 25\25 {
@@ -2829,7 +2944,7 @@ img {
 				color: white;
 				font-weight: 100;
 				letter-spacing: 0.3em;
-				margin: -2em 0 0 1.2em;
+				margin: -1.5em 0 0 1.2em;
 			}
 
 		#header .container {

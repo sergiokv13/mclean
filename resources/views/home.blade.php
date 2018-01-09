@@ -113,39 +113,43 @@ http://themeforest.net/user/owwwlab/
               <h2>Proyectos</h2>
             </header>
             <p>{!!$website_information->projects_text!!}</p>
-            <div class="ol-grid-filters">
-              <ul class="default-filters">
-                <li  class="active"><a style="border-bottom: none;" href="#" data-filter="*">Todos</a></li>
-                @foreach($categories as $category) 
-                  <li ><a style="border-bottom: none;" href="#" data-filter=".cat_{!!$category->id!!}">{!!$category->name!!}</a></li>
-                @endforeach 
-              </ul>
-              <div class="select-filters">
-                <select>
-                  <option value="*">Todos</option>
-                   @foreach($categories as $category) 
-                    <option value=".cat_{!!$category->id!!}">{!!$category->name!!}</option>
-                  @endforeach 
-                </select>
-              </div>
-            </div>
 
 
-            </a>
+              @foreach($categories as $category) 
 
-             <div class="ol-grid masonry col-3 with-gutter ol-lightbox-gallery">
-                @foreach($projects as $project) 
-                  <!-- #####Begin grid item-->
-                  <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}">
-                    <div class="grid-item cat_{!!$project->category()->id!!}">
-                      <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project->project_image)}} " alt="image hover">
-                      </div>
+                  <div id="container2{{$category->id}}" class="container2" style="margin-bottom: 10%;">
+
+                   <div id="arrowL{{$category->id}}" class="arrowL">
+                      <
                     </div>
-                  </a>
-                  <!-- #####End grid item-->
-                 @endforeach 
-              </div>
 
+                    <div id="arrowR{{$category->id}}" class="arrowR">
+                      >
+                    </div>
+
+                    <div class="list-container">
+                        <div class='list'>
+                            <div id="item{{$category->id}}" class='item' style = "text-align: left; width: 200px;">
+                              {!!$category->name!!}
+                            </div>
+                            @foreach($projects->where("category_id",$category->id) as $project) 
+                            <div id="item{{$category->id}}" class="item">
+                              <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}">
+                                    <span>
+                                      <img class="imagen_proyecto" src="{{ url('projects/'.$project->project_image)}} " alt="image hover" height="150px" width="auto" >
+                                    </span>
+                              </a>
+                              <!-- #####End grid item-->
+                            </div>
+                            @endforeach 
+
+                        </div>
+                    </div>
+
+                </div>
+              @endforeach 
+           
+             
           </div>
           <a href="#team" class="goto-next scrolly">Next</a>
         </div>
@@ -246,4 +250,45 @@ http://themeforest.net/user/owwwlab/
 
   
   });
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+   @foreach($categories as $category)     
+    var $item{{$category->id}} = $('div#item{{$category->id}}'), //Cache your DOM selector
+        visible{{$category->id}} = 1, //Set the number of items that will be visible
+        index{{$category->id}} = 0, //Starting index
+        endIndex{{$category->id}} = ( $item{{$category->id}}.length / visible{{$category->id}} ) - 1; //End index
+    
+    $('div#arrowR{{$category->id}}').click(function(){
+        if(index{{$category->id}} < endIndex{{$category->id}} ){
+          index{{$category->id}}++;
+          $item{{$category->id}}.animate({'left':'-=100px'});
+        }
+    });
+    
+    $('div#arrowL{{$category->id}}').click(function(){
+        if(index{{$category->id}} > 0){
+          index{{$category->id}}--;            
+          $item{{$category->id}}.animate({'left':'+=100px'});
+        }
+    });
+
+    $('div#container2{{$category->id}}').hover(
+      function () {
+        $('div#arrowR{{$category->id}}').fadeIn();
+        $('div#arrowL{{$category->id}}').fadeIn();
+      }, 
+      function () {
+        $('div#arrowR{{$category->id}}').fadeOut();
+        $('div#arrowL{{$category->id}}').fadeOut();
+      }
+    );
+
+    
+  @endforeach 
+    
+});
 </script>

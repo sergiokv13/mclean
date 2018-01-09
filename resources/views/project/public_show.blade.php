@@ -56,13 +56,13 @@ http://themeforest.net/user/owwwlab/
              <div class="ol-grid masonry col-3 with-gutter  ol-lightbox-gallery">
                 @foreach($project->documents as $document) 
                   <!-- #####Begin grid item-->
+                <a style="border-bottom: none;" href="{{ url('projects/documents/'.$document->url)}} " class="ol-lightbox">
                   <div class="grid-item cat_{!!$project->category()->id!!}">
                     <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/documents/'.$document->url)}} " alt="image hover">
-                      <div class="icons">
-                        <a style="border-bottom: none;" href="{{ url('projects/documents/'.$document->url)}} " class="ol-lightbox"><i class="fa fa-search"></i></a></div>
                     </div>
                   </div>
                   <!-- #####End grid item-->
+                  </a>
                  @endforeach 
               </div>
 
@@ -80,15 +80,14 @@ http://themeforest.net/user/owwwlab/
             @foreach($projects_in_category as $project_cat) 
               <!-- #####Begin grid item-->
               @if ($project_cat->id != $project->id)
+              <a style="border-bottom: none;" href="/project_show/{!!$project_cat->id!!}">
                 <div class="grid-item cat_{!!$project_cat->category()->id!!}">
                   <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project_cat->project_image)}} " alt="image hover">
-                    <div class="icons">
-
-                      <a title="<span style='color:white !important;'>{{$project->name}}</span> <br> <a href='/project_show/{!!$project->id!!}'>Ver proyecto</a>" style="border-bottom: none;" href="{{ url('projects/'.$project_cat->project_image) }} " class="ol-lightbox"><i class="fa fa-search"></i></a>
-
-                      <a style="border-bottom: none;" href="/project_show/{!!$project_cat->id!!}"><i class="fa fa-arrow-right"></i></a></div>
+               
+                      
                   </div>
                 </div>
+              </a>
               @endif
               <!-- #####End grid item-->
              @endforeach 
