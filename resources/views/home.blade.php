@@ -13,6 +13,9 @@ http://themeforest.net/user/owwwlab/
 
   <!-- #####Begin head-->
   <head>
+    <link rel="icon" href="{{ url('img/favicon.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url('img/favicon.png') }}">
+
     <title>MACLEAN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
