@@ -254,7 +254,7 @@ http://themeforest.net/user/owwwlab/
 
 <script type="text/javascript">
 
-$(document).ready(function() {
+$(window).bind('load',function() {
 
    @foreach($categories as $category)     
 
@@ -275,16 +275,16 @@ $(document).ready(function() {
 
     if (element{{$category->id}}.offsetWidth < element{{$category->id}}.scrollWidth)
     {
-       $('div#container2{{$category->id}}').hover(
-      function () {
-        $('div#arrowR{{$category->id}}').fadeIn();
-        $('div#arrowL{{$category->id}}').fadeIn();
-      }, 
-      function () {
-        $('div#arrowR{{$category->id}}').fadeOut();
-        $('div#arrowL{{$category->id}}').fadeOut();
-      }
-    );
+        $('div#container2{{$category->id}}').hover(
+        function () {
+          $('div#arrowR{{$category->id}}').fadeIn();
+          $('div#arrowL{{$category->id}}').fadeIn();
+        }, 
+        function () {
+          $('div#arrowR{{$category->id}}').fadeOut();
+          $('div#arrowL{{$category->id}}').fadeOut();
+        }
+      );
     }
 
 
