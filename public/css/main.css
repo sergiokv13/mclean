@@ -16,14 +16,15 @@
 }
 
 .list-container {
-	overflow:hidden;    
-	float:left; 
+	width: 100%;
+	overflow:hidden; 
+	display: inline-block; 
 	white-space: nowrap; 
 }
 
 .list{
 	width: 100%;
-    float:left;
+    display: inline-block;
     white-space: nowrap; 
 }
 
@@ -59,7 +60,7 @@
     width:5%;
     margin-right: -5%;
     height:150px;
-    float:left;
+    float: left;
     cursor:pointer;
     line-height: 150px;
   	text-align: center;
@@ -76,11 +77,11 @@
 }
 
 .item{
+	vertical-align: top;
     height:150px;
-    float:left;
+    display: inline-block;
     position:relative;
     z-index: 600 !important;
-    margin-right: 2px;
 }
 
 

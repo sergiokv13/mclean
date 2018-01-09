@@ -127,8 +127,8 @@ http://themeforest.net/user/owwwlab/
                       >
                     </div>
 
-                    <div class="list-container">
-                        <div class='list' style="min-width: 300%; width: 100%;  ">
+                    <div class="list-container" id="list-container{{$category->id}}">
+                        <div class='list'>
                             <div id="item{{$category->id}}" class='item' style = "text-align: left; width: 200px;">
                               {!!$category->name!!}
                             </div>
@@ -257,26 +257,25 @@ http://themeforest.net/user/owwwlab/
 $(document).ready(function() {
 
    @foreach($categories as $category)     
-    var $item{{$category->id}} = $('div#item{{$category->id}}'), //Cache your DOM selector
-        visible{{$category->id}} = 1, //Set the number of items that will be visible
-        index{{$category->id}} = 0, //Starting index
-        endIndex{{$category->id}} = ( $item{{$category->id}}.length / visible{{$category->id}} ); //End index
-    
-    $('div#arrowR{{$category->id}}').click(function(){
-        if(index{{$category->id}} < endIndex{{$category->id}} ){
-          index{{$category->id}}++;
-          $item{{$category->id}}.animate({'left':'-=100px'});
-        }
-    });
-    
-    $('div#arrowL{{$category->id}}').click(function(){
-        if(index{{$category->id}} > 0){
-          index{{$category->id}}--;            
-          $item{{$category->id}}.animate({'left':'+=100px'});
-        }
+
+
+    $('div#arrowL{{$category->id}}').click(function () { 
+      var leftPos = $('#list-container{{$category->id}}').scrollLeft();
+      $("#list-container{{$category->id}}").animate({scrollLeft: leftPos - 200}, 800);
     });
 
-    $('div#container2{{$category->id}}').hover(
+    $('div#arrowR{{$category->id}}').click(function () { 
+      var leftPos = $('#list-container{{$category->id}}').scrollLeft();
+      $("#list-container{{$category->id}}").animate({scrollLeft: leftPos + 200}, 800);
+    });
+    
+   
+
+    var element{{$category->id}} = document.getElementById("list-container{{$category->id}}");
+
+    if (element{{$category->id}}.offsetWidth < element{{$category->id}}.scrollWidth)
+    {
+       $('div#container2{{$category->id}}').hover(
       function () {
         $('div#arrowR{{$category->id}}').fadeIn();
         $('div#arrowL{{$category->id}}').fadeIn();
@@ -286,6 +285,8 @@ $(document).ready(function() {
         $('div#arrowL{{$category->id}}').fadeOut();
       }
     );
+    }
+
 
     
   @endforeach 
