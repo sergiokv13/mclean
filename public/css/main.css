@@ -18,7 +18,7 @@
     position: absolute;
     right: 0;
     background-color: white !important;
-    width: 150px;
+    width: 200px;
 }
 
 .dropdown:hover .dropdown-content {

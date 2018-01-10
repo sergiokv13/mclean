@@ -42,11 +42,11 @@ http://themeforest.net/user/owwwlab/
 
 
  @foreach($categories as $category) 
-  <div id = "side_menu" class="dropdown" style="top: {{$category->id*5 + 5}}%; z-index: {{1000 - $category->id}};">
+  <div id = "side_menu" class="dropdown" style="top: {{$category->id*5 + 5}}%; z-index: {{100 - $category->id}};">
   <span>{{$category->name}}</span>
   <div class="dropdown-content">
-  @foreach($projects->where("category_id",$category->id) as $project)
-    <a  style="color:#6f7577; border-bottom: none;" href="/project_show/{!!$project->id!!}">{{$project->name}}</a><br>
+  @foreach($projects->where("category_id",$category->id) as $project_for_show)
+    <a  style="color:#6f7577; border-bottom: none;" href="/project_show/{{$project_for_show->id}}">{{$project_for_show->name}}</a><br>
   @endforeach 
   </div>
   </div>
