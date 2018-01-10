@@ -39,6 +39,22 @@ http://themeforest.net/user/owwwlab/
   </head>
   <!-- #####End head-->
   <body>
+
+
+ @foreach($categories as $category) 
+  <div id = "side_menu" class="dropdown" style="top: {{$category->id*5 + 5}}%; z-index: {{1000 - $category->id}};">
+  <span>{{$category->name}}</span>
+  <div class="dropdown-content">
+  @foreach($projects->where("category_id",$category->id) as $project)
+    <a  style="color:#6f7577; border-bottom: none;" href="/project_show/{!!$project->id!!}">{{$project->name}}</a><br>
+  @endforeach 
+  </div>
+  </div>
+ @endforeach 
+    
+
+
+
     <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;"> <img src={{url("img/logo2.png")}} id="logotipo"></h2></a></CENTER>
 
       <section id="two" class="main special">

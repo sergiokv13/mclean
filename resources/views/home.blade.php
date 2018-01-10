@@ -38,12 +38,15 @@ http://themeforest.net/user/owwwlab/
 
     <script src="{{ asset('js/custom.js') }}"></script>
 
-    <div id = "side_menu">
-      <a  href="#header" class="scrolly active" style="color:#6f7577; border-bottom: none;"> INICIO</a><br>
-      <a  href="#one" class="scrolly" style="color:#6f7577; border-bottom: none;"> ACERCA DE</a><br>
-      <a  href="#two" class="scrolly" style="color:#6f7577; border-bottom: none;"> PROYECTOS</a><br>
-      <a  href="#team" class="scrolly" style="color:#6f7577; border-bottom: none;"> EQUIPO</a><br>
-      <a  href="#footer" class="scrolly" style="color:#6f7577; border-bottom: none;"> CONTACTO</a><br>
+    <div id = "side_menu" class="dropdown">
+      <span style="color: #6f7577; font-size: 2em;opacity: 0.5;filter: alpha(opacity=50);"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      <div class="dropdown-content">
+        <a  href="#header" class="scrolly active" style="color:#6f7577; border-bottom: none;"> INICIO</a><br>
+        <a  href="#one" class="scrolly" style="color:#6f7577; border-bottom: none;"> ACERCA DE</a><br>
+        <a  href="#two" class="scrolly" style="color:#6f7577; border-bottom: none;"> PROYECTOS</a><br>
+        <a  href="#team" class="scrolly" style="color:#6f7577; border-bottom: none;"> EQUIPO</a><br>
+        <a  href="#footer" class="scrolly" style="color:#6f7577; border-bottom: none;"> CONTACTO</a><br>
+      </div>
     </div>
 
 
@@ -100,7 +103,7 @@ http://themeforest.net/user/owwwlab/
             <header class="major">
               <img src="{{ url('website/'.$website_information->mclean_image) }}"><h2></h2>
             </header>
-            <p>{!!$website_information->about_me!!}</p>
+            <p align="justify">{!!$website_information->about_me!!}</p>
           </div>
           <a href="#two" class="goto-next scrolly">Next</a>
         </div>
