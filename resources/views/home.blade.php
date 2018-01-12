@@ -86,8 +86,7 @@ http://themeforest.net/user/owwwlab/
 
             <div id="conocemas">
               <a href="#one" class="goto-next scrolly">
-                <img style="margin-left: auto; margin-right: auto;" src='{{url("img/logo.png")}}' id="logotipo">
-                <p>{!!$website_information->welcome_text!!}</p>
+                <img style="margin-left: auto; margin-right: auto;" src='{{url("img/logo_final.png")}}' id="logotipo">
               </a>
             </div>
 
