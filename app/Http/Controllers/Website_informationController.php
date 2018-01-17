@@ -45,7 +45,7 @@ class Website_informationController extends Controller
     {
         $website_information = new Website_information();
         
-        $website_information->welcome_text = $request->welcome_text;
+        $website_information->welcome_text = "";
         
         $website_information->about_me = $request->about_me;
         
@@ -154,7 +154,6 @@ class Website_informationController extends Controller
     {
 
         $messsages = array(
-        'welcome_text.required'=>'El texto de bienvenida es obligatorio.',
         'about_me.required' => 'El texto de sección sobre el arquitecto es obligatorio.',
         'projects_text.required' => 'El texto de sección proyectos es obligatorio.',
         'team_text.required'=>'El texto de sección equipo es obligatorio.', 
@@ -165,7 +164,6 @@ class Website_informationController extends Controller
         );
 
         $rules = array(
-            'welcome_text' => 'required',
             'about_me' => 'required',
             'projects_text' => 'required',
             'team_text' => 'required',
@@ -179,7 +177,7 @@ class Website_informationController extends Controller
 
         $website_information = Website_information::findOrfail($id);
     	
-        $website_information->welcome_text = $request->welcome_text;
+        $website_information->welcome_text = "";
         
         $website_information->about_me = $request->about_me;
         

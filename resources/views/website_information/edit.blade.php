@@ -29,14 +29,6 @@
         
         <input type = 'hidden' name = '_token' value = '{{Session::token()}}'>
 
-        <h2>Sección de portada </h2>
-        <info>Esta sección es la primera que se ve al ingresar al sitio web.</info><br><br>
-        <div class="input-field col s6 form-group">
-            <label for="welcome_text">Texto de bienvenida</label>
-            <textarea id="welcome_text" name = "welcome_text"  class="validate form-control">{!!$website_information->
-            welcome_text!!}</textarea>
-        </div>
-
         <h2>Sección de presentación del arquitecto </h2>
         <info>Esta sección es la primera del sitio, en la cual se presenta al arquitecto.</info><br><br>
         <div class="input-field col s6 form-group">
