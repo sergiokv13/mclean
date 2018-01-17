@@ -52,7 +52,7 @@
 	color: white;
     width:5%;
     margin-left: -5%;
-    height:150px;
+    height:200px;
     float:right;
     cursor:pointer;
     line-height: 150px;
@@ -76,7 +76,7 @@
 	color: white;
     width:5%;
     margin-right: -5%;
-    height:150px;
+    height:200px;
     float: left;
     cursor:pointer;
     line-height: 150px;
@@ -96,7 +96,7 @@
 .item{
 	vertical-align: top;
 	text-align: left;
-    height:150px;
+    height:200px;
     display: inline-block;
     position:relative;
     z-index: 600 !important;

@@ -143,7 +143,10 @@ http://themeforest.net/user/owwwlab/
                                     <span>
                                       <img class="imagen_proyecto" src="{{ url('projects/'.$project->project_image)}} " alt="image hover" height="150px" width="auto" >
                                     </span>
+                                    <br>
+                                    <span style="font-size: 0.8em !important; color: black;">{{$project->name}}</span>
                               </a>
+                                
                               <!-- #####End grid item-->
                             </div>
                             @endforeach 
