@@ -205,7 +205,7 @@ http://themeforest.net/user/owwwlab/
               <div class="12u$"><textarea name="message" id="message" placeholder="Mensaje" rows="4" required style="resize: none;"></textarea></div>
               <div class="12u$">
                 <ul class="actions">
-                  <li><input type="submit" value="Send Message" class="special" /></li>
+                  <li><input type="submit" value="Enviar mensaje" class="special" /></li>
                 </ul>
               </div>
             </div>

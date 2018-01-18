@@ -55,7 +55,7 @@ http://themeforest.net/user/owwwlab/
 
 
 
-    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white;"> <img src={{url("img/logo2.png")}} id="logotipo"></h2></a></CENTER>
+    <CENTER><a href="/"><h2 style="margin-top: 20px; color:white; width: 60%;"> <img src={{url("img/logo2.png")}} id="logotipo"></h2></a></CENTER>
 
       <section id="two" class="main special">
         <div class="container">
