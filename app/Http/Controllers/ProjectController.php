@@ -100,6 +100,12 @@ class ProjectController extends Controller
             $project->project_image = $image_name;
         }
 
+
+        \Image::make(public_path('projects/').$image_name)
+        ->resize(null, 150 , function ($constraint){
+             $constraint->aspectRatio();
+        })->save(public_path('projects/')."thumb_".$image_name);
+
         $project->save();
 
         $role_name = 'Administrator in project '.$project->name.'-'.$project->id;
@@ -229,6 +235,11 @@ class ProjectController extends Controller
             $request->project_image->move(public_path('projects'), $image_name);
             $project->project_image = $image_name;
         }
+
+         \Image::make(public_path('projects/').$image_name)
+        ->resize(null, 150 , function ($constraint){
+             $constraint->aspectRatio();
+        })->save(public_path('projects/')."thumb_".$image_name);
         
         
         $project->save();
@@ -318,6 +329,12 @@ class ProjectController extends Controller
 
         $document->save();
 
+         \Image::make(public_path('projects/documents/').$new_document)
+        ->resize(null, 150 , function ($constraint){
+             $constraint->aspectRatio();
+        })->save(public_path('projects/documents/')."thumb_".$new_document);
+
+
         $documents = $project->documents;
 
         return view('project.documents', compact('documents','project'));
@@ -357,6 +374,11 @@ class ProjectController extends Controller
         }
 
         $document->name = $request->docName;
+
+         \Image::make(public_path('projects/documents/').$new_document)
+        ->resize(null, 150 , function ($constraint){
+             $constraint->aspectRatio();
+        })->save(public_path('projects/documents/')."thumb_".$new_document);
 
         $document->save();
 

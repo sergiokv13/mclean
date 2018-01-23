@@ -140,7 +140,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Andheiberg\Notify\NotifyServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -198,6 +199,7 @@ return [
     */
 
     'aliases' => [
+        'Image' => Intervention\Image\Facades\Image::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Notify' => Andheiberg\Notify\Facades\Notify::class,
         'App' => Illuminate\Support\Facades\App::class,

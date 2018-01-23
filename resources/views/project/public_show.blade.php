@@ -74,7 +74,7 @@ http://themeforest.net/user/owwwlab/
                   <!-- #####Begin grid item-->
                 <a style="border-bottom: none;" href="{{ url('projects/documents/'.$document->url)}} " class="ol-lightbox">
                   <div class="grid-item cat_{!!$project->category()->id!!}">
-                    <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/documents/'.$document->url)}} " alt="image hover">
+                    <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/documents/thumb_'.$document->url)}} " alt="image hover">
                     </div>
                   </div>
                   <!-- #####End grid item-->
@@ -98,7 +98,7 @@ http://themeforest.net/user/owwwlab/
               @if ($project_cat->id != $project->id)
               <a style="border-bottom: none;" href="/project_show/{!!$project_cat->id!!}">
                 <div class="grid-item cat_{!!$project_cat->category()->id!!}">
-                  <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/'.$project_cat->project_image)}} " alt="image hover">
+                  <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/thumb_'.$project_cat->project_image)}} " alt="image hover">
                
                       
                   </div>

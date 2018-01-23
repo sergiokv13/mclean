@@ -141,7 +141,7 @@ http://themeforest.net/user/owwwlab/
                             <div id="item{{$category->id}}" class="item">
                               <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}">
                                     <span>
-                                      <img class="imagen_proyecto" src="{{ url('projects/'.$project->project_image)}} " alt="image hover" height="150px" width="auto" >
+                                      <img class="imagen_proyecto" src="{{ url('projects/thumb_'.$project->project_image)}} " alt="image hover" height="150px" width="auto" >
                                     </span>
                                     <br>
                                     <span style="font-size: 0.8em !important; color: black;">{{$project->name}}</span>
