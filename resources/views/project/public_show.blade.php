@@ -100,7 +100,7 @@ http://themeforest.net/user/owwwlab/
                 <div class="grid-item cat_{!!$project_cat->category()->id!!}">
                   <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/thumb_'.$project_cat->project_image)}} " alt="image hover">
                   </div>
-                  <span style="font-size: 0.8em !important; color: black;">{{$project->name}}</span>
+                  <span style="font-size: 0.8em !important; color: black;">{{$projects_in_category}}</span>
                 </div>
               </a>
               @endif
