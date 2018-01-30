@@ -96,12 +96,11 @@ http://themeforest.net/user/owwwlab/
             @foreach($projects_in_category as $project_cat) 
               <!-- #####Begin grid item-->
               @if ($project_cat->id != $project->id)
-              <a style="border-bottom: none;" href="/project_show/{!!$project_cat->id!!}">
+              <a style="border-bottom: none;text-align: left;" href="/project_show/{!!$project_cat->id!!}">
                 <div class="grid-item cat_{!!$project_cat->category()->id!!}">
                   <div class="gi-wrapper ol-hover hover-2 ol-animate fadeInUp"><img src="{{ url('projects/thumb_'.$project_cat->project_image)}} " alt="image hover">
-               
-                      
                   </div>
+                  <span style="font-size: 0.8em !important; color: black;">{{$project->name}}</span>
                 </div>
               </a>
               @endif
