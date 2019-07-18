@@ -1,13 +1,13 @@
 <!--
-                                   _       _   
-								  | |     | |    
-  Designed and Coded By           | | __ _| |__  
- / _ \ \ /\ / /\ \ /\ / /\ \ /\ / / |/ _` | '_ \ 
+                                   _       _
+								  | |     | |
+  Designed and Coded By           | | __ _| |__
+ / _ \ \ /\ / /\ \ /\ / /\ \ /\ / / |/ _` | '_ \
 | (_) \ V  V /  \ V  V /  \ V  V /| | (_| | |_) |
- \___/ \_/\_/    \_/\_/    \_/\_/ |_|\__,_|_.__/ 
+ \___/ \_/\_/    \_/\_/    \_/\_/ |_|\__,_|_.__/
 
 http://themeforest.net/user/owwwlab/
-                                          
+
 -->
 <html class="is-touch">
 
@@ -33,7 +33,7 @@ http://themeforest.net/user/owwwlab/
       <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
 
-      <script src="{{ asset('js/vendors/vendors.js') }} "></script>      
+      <script src="{{ asset('js/vendors/vendors.js') }} "></script>
     <!-- Only for local and can be removed on server-->
 
     <script src="{{ asset('js/custom.js') }}"></script>
@@ -50,13 +50,13 @@ http://themeforest.net/user/owwwlab/
     </div>
 
 
- 
+
 
     @if(Session::has('message'))
       <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         {{ Session::get('message') }}
-      </div> 
+      </div>
     @endif
 
   </head>
@@ -66,7 +66,7 @@ http://themeforest.net/user/owwwlab/
 
 
 
-  <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay loop>
+  <video poster="{{ url('img/videoposter.png') }}" id="bgvid" playsinline autoplay loop muted>
         <source src="{{ url('img/video.mp4') }}" type="video/mp4">
   </video>
 
@@ -74,7 +74,7 @@ http://themeforest.net/user/owwwlab/
 
       <div style="text-align: center; background-color: white; width: 50%;margin:auto;">
         Usted inicio sesión como {{Auth::user()->name}}. <br> <a href="/scaffold-dashboard">Ir al dashboard.</a>
-      </div> 
+      </div>
 
     @endif
 
@@ -82,7 +82,7 @@ http://themeforest.net/user/owwwlab/
 
     <!-- Header -->
       <section id="header">
-          <header class="major"> 
+          <header class="major">
 
             <div id="conocemas">
               <a href="#one" class="goto-next scrolly">
@@ -97,7 +97,7 @@ http://themeforest.net/user/owwwlab/
     <!-- One -->
       <section id="one" class="main special">
         <div class="container">
-          
+
           <div class="content">
             <header class="major">
               <img src="{{ url('website/'.$website_information->mclean_image) }}"><h2></h2>
@@ -120,7 +120,7 @@ http://themeforest.net/user/owwwlab/
             <p>{!!$website_information->projects_text!!}</p>
 
 
-              @foreach($categories as $category) 
+              @foreach($categories as $category)
 
                   <div id="container2{{$category->id}}" class="container2" style="margin-bottom: 10%;">
 
@@ -137,7 +137,7 @@ http://themeforest.net/user/owwwlab/
                             <div id="item{{$category->id}}" class='item' style = "text-align: left; width: 200px;">
                               {!!$category->name!!}
                             </div>
-                            @foreach($projects->where("category_id",$category->id) as $project) 
+                            @foreach($projects->where("category_id",$category->id) as $project)
                             <div id="item{{$category->id}}" class="item">
                               <a style="border-bottom: none;" href="/project_show/{!!$project->id!!}">
                                     <span>
@@ -146,18 +146,18 @@ http://themeforest.net/user/owwwlab/
                                     <br>
                                     <span style="font-size: 0.8em !important; color: black;">{{$project->name}}</span>
                               </a>
-                                
+
                               <!-- #####End grid item-->
                             </div>
-                            @endforeach 
+                            @endforeach
 
                         </div>
                     </div>
 
                 </div>
-              @endforeach 
-           
-             
+              @endforeach
+
+
           </div>
           <a href="#team" class="goto-next scrolly">Next</a>
         </div>
@@ -172,7 +172,7 @@ http://themeforest.net/user/owwwlab/
             <p>{!!$website_information->team_text!!}</p>
           <a href="#footer" class="goto-next scrolly">Next</a>
 
-              @foreach($team_members as $team_member) 
+              @foreach($team_members as $team_member)
 
                         <div style=" width: 70%; margin-right: auto; margin-left: auto;">
                             <div class="team-member">
@@ -195,7 +195,7 @@ http://themeforest.net/user/owwwlab/
         <div class="container">
           <header class="major">
             <h2>Contacto</h2>
-           
+
           </header>
           <form method="post" action="/contact_mail">
             {!! csrf_field() !!}
@@ -233,16 +233,16 @@ http://themeforest.net/user/owwwlab/
 
 
 <script type="text/javascript">
-  $(window).scroll(function(){ 
+  $(window).scroll(function(){
 
   var first = $("#one").offset().top;
-  var last = $("#footer").offset().top;  
+  var last = $("#footer").offset().top;
   var pos = $(window).scrollTop();
 
   if(pos >= first/2) {
       $("section").css({
                   "background-color" : "white",
-                  "transition": "background 0.5s linear"             
+                  "transition": "background 0.5s linear"
       });
      $("#side_menu").fadeIn(500);
   }
@@ -250,13 +250,13 @@ http://themeforest.net/user/owwwlab/
   if(pos < first/2) {
       $("section").css({
                   "background-color" : "",
-                  "transition": "background 0.5s linear"             
+                  "transition": "background 0.5s linear"
       });
       $("#side_menu").fadeOut(500);
   }
-  
 
-  
+
+
   });
 </script>
 
@@ -264,20 +264,20 @@ http://themeforest.net/user/owwwlab/
 
 $(window).bind('load',function() {
 
-   @foreach($categories as $category)     
+   @foreach($categories as $category)
 
 
-    $('div#arrowL{{$category->id}}').click(function () { 
+    $('div#arrowL{{$category->id}}').click(function () {
       var leftPos = $('#list-container{{$category->id}}').scrollLeft();
       $("#list-container{{$category->id}}").animate({scrollLeft: leftPos - 200}, 800);
     });
 
-    $('div#arrowR{{$category->id}}').click(function () { 
+    $('div#arrowR{{$category->id}}').click(function () {
       var leftPos = $('#list-container{{$category->id}}').scrollLeft();
       $("#list-container{{$category->id}}").animate({scrollLeft: leftPos + 200}, 800);
     });
-    
-   
+
+
 
     var element{{$category->id}} = document.getElementById("list-container{{$category->id}}");
 
@@ -287,7 +287,7 @@ $(window).bind('load',function() {
         function () {
           $('div#arrowR{{$category->id}}').fadeIn();
           $('div#arrowL{{$category->id}}').fadeIn();
-        }, 
+        },
         function () {
           $('div#arrowR{{$category->id}}').fadeOut();
           $('div#arrowL{{$category->id}}').fadeOut();
@@ -296,8 +296,8 @@ $(window).bind('load',function() {
     }
 
 
-    
-  @endforeach 
-    
+
+  @endforeach
+
 });
 </script>

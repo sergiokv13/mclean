@@ -40,8 +40,8 @@ class main extends Controller
             $message->to('raulmaclean@yahoo.com');
 
         });
-        
-        Session::flash('message', 'Su mensaje fue enviado.'); 
+
+        \Session::flash('message', 'Su mensaje fue enviado.'); 
 
        return redirect('/');
     }
